@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de la Première Séance de Coaching Individuel</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 32px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.checklist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  transition: all 0.5s ease;
+}
+
+.checklist li.checked {
+  background-color: #d4edda; /* Couleur de fond quand cochée (vert pâle) */
+  border-color: #c3e6cb; /* Couleur de la bordure quand cochée (vert) */
+}
+
+.checklist li:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .checklist li {
+    padding: 10px;
+    margin: 10px 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Plan de la Première Séance de Coaching Individuel</h1>
+
+  <h2>Séance des Fondations</h2>
+
+  <ul class="checklist">
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Choix d'un Lieu Confortable</li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Préparation Matérielle</li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Prise de contact Initiale
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion informelle pour établir un climat de confiance.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Option : Envoi d’un questionnaire préalable au client pour recueillir des informations de base avant l’entretien.</li>
+      </ul>
+    </li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentations Mutuelles et Évaluation des Attentes
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coaché se présente.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coach se présente à son tour.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion sur les attentes et les objectifs spécifiques de la séance et du processus de coaching.</li>
+      </ul>
+    </li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Clarification du Déroulement des Séances
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentation du plan de la séance, y compris les tarifs, le déroulement, et le contenu des séances futures.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Collaboration pour ajuster la durée, le rythme, le style, l’approche, etc.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Élaboration d’un agenda : Co-création d’un agenda pour la séance et les sessions suivantes.</li>
+      </ul>
+    </li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Définition du Coaching et Cadre de Fonctionnement
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Demande de la propre définition du coaching au client.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Partage de la propre définition du coaching du coach.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Clarification des limites et rappel des obligations professionnelles, y compris le secret professionnel.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion détaillée sur le processus de coaching et clarification des responsabilités du coaché et du coach.</li>
+      </ul>
+    </li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion sur les Ressources et Outils
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Exploration des ressources actuelles du coaché.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Révision des outils de coaching utilisés pendant le processus.</li>
+      </ul>
+    </li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Évaluation de la Motivation
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Évaluation de la motivation du coaché envers le processus de coaching.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Identification des obstacles potentiels.</li>
+      </ul>
+    </li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Finalisation et Engagement
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Co-création d’un contrat de démarche : Définition conjointe des objectifs du client et du nombre de séances nécessaires.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Encouragement du client à prendre des notes et à s’engager activement dans le processus.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<script>
+function toggleCheckbox(checkbox) {
+  checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+}
+</script>
+
+</body>
+</html>
