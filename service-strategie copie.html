@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Accompagnement en Stratégie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #085e79;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #fff 3px solid;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header .highlight,
+        header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+
+
+        /* Nouveaux styles pour la navigation */
+nav {
+    background-color: #085e79;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px; /* Espacement plus large entre les éléments */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px; /* Taille de police légèrement plus grande */
+    text-transform: uppercase; /* Mise en majuscules */
+    letter-spacing: 1px; /* Espacement entre les caractères */
+    transition: color 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+nav a:hover {
+    background-color: #ffcc00; /* Ajout d'une couleur de fond au survol */
+    color: #073f50; /* Changement de couleur au survol */
+}
+
+section {
+    padding: 20px; /* Ajustez l'espacement interne selon vos besoins */
+    text-align: center;
+}
+
+h2 {
+    color: #085e79;
+}
+.titre-services {
+    text-align: center; /* Centre le texte horizontalement */
+    font-size: 50px; /* Ajustez la taille du texte selon vos préférences */
+}
+
+.container {
+    text-align: center;
+    margin-left: 2px; /* Ajout de marge à gauche du conteneur */
+    margin-right: 2px; /* Ajout de marge à droite du conteneur */
+}
+
+        section {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Styles pour la section showcase */
+        #showcase {
+            padding: 80px 0;
+            text-align: center; 
+            font-size: 18px; /* Ajustement de la taille de la police */
+            background-color: #ffffff;
+            color: #085e79;
+        }
+
+        #showcase h1 {
+            font-size: 2.5em;
+            color: #e8491d;
+            margin-bottom: 20px; /* Ajout de marge en bas */
+        }
+
+        #showcase p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin-bottom: 40px; /* Ajout de marge en bas */
+        }
+
+        /* Styles pour la section content */
+        .content {
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+            margin-top: 40px; /* Ajout de marge en haut */
+        }
+
+        .content-img {
+            flex: 1;
+            overflow: hidden; /* Masque les images qui dépassent */
+        }
+
+        .content-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-text {
+            flex: 1.5;
+            padding: 4rem;
+        }
+
+        .content-title {
+            font-family: 'Playfair Display', serif;
+            color: #085e79;
+            font-size: 3.5rem; /* Ajustement de la taille de la police */
+            margin-bottom: 20px; /* Ajout de marge en bas */
+        }
+
+        .content-subtitle {
+            font-size: 1.8rem; /* Ajustement de la taille de la police */
+            font-weight: 500; /* Ajustement du poids de la police */
+            text-transform: uppercase;
+            color: #085e79;
+            margin: 0.5rem 0 2rem;
+        }
+
+        .content-paragraph {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: #085e79; /* Couleur de texte légèrement modifiée */
+        }
+
+
+
+
+        /* Nouveau style pour le footer */
+footer {
+    background-color: #073f50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Changement de couleur au survol */
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #0e76a8 ; /* Changement de couleur au survol */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+
+
+        /* Ajout de styles pour les petits écrans */
+        @media screen and (max-width: 756px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-img {
+                height: 350px;
+                width: 100%;
+            }
+        }
+    
+
+        @media screen and (max-width: 1100px) {
+            .content-text {
+                flex: 1;
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            .content-text .content-paragraph {
+                font-size: 1.4rem;
+                margin-bottom: 1.6rem;
+            }
+
+            .content-text .content-subtitle {
+                font-size: 2rem;
+            }
+
+            .content-text .content-title {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media screen and (max-width: 756px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-text .content-paragraph {
+                text-align: justify;
+            }
+
+            .content-img {
+                height: 350px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 456px) {
+            .content-text .content-paragraph {
+                font-size: 1.2rem;
+            }
+            .content-text .content-subtitle {
+                font-size: 1.72rem;
+            }
+
+            .content-text .content-title {
+                font-size: 2.7rem;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><span class="highlight">Notre</span> Accompagnement en Stratégie</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>       
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="pov.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Une Vision Holistique et une Méthodologie Rigoureuse pour des Stratégies Efficaces</h1>
+            <p>Découvrez notre approche immersive, nos diagnostics pointus, et laissez-nous façonner votre identité stratégique.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="content">
+                <div class="content-img">
+                    <img src="action.png" alt="Body Building">
+                </div>
+                <div class="content-text">
+                    <h2 class="content-title">Phase de Planification</h2>
+                    <h4 class="content-subtitle">Réalisez un diagnostic stratégique externe avec :</h4>
+                    <p class="content-paragraph">* Les tendances macro-environnementales (modèle PESTEL : politiques, économiques, socio-culturelles, technologiques, environnementales, réglementaires) et construction de scénarios chiffrés.</p>
+                    <p class="content-paragraph">* L’analyse de votre micro-environnement (secteur, concurrence au sens large).</p>
+                </div>
+                <div class="content-text">
+                    <h2 class="content-title">Mise en Œuvre Opérationnelle</h2>
+                    <h4 class="content-subtitle">Avec des Plans d’action stratégiques alignez-vous, corrigez les faiblesses, anticipez les évolutions réglementaires. Nous vous guidons à chaque étape.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a>
+            <a href="index.html">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="pov.html">Blog</a>
+        </div>
+        <div class="social-icons">
+            <!-- Icônes de médias sociaux avec Font Awesome -->
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    
+        <div class="contact-info">
+            <p>Email: contact@taiqo.fr</p>
+            <p>Téléphone: +33 123 456 789</p>
+        </div>
+    
+        <p>&copy; 2023 Taïqo. Tous droits réservés.</p>
+    </footer>
+    
+</body>
+
+</html>
