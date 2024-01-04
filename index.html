@@ -71,6 +71,15 @@ h2 {
     padding: 10px;
     margin: 10px 0;
   }
+
+  .checklist li ul {
+    margin-left: 20px;
+  }
+
+  .checklist li ul li {
+    padding: 10px;
+    margin: 10px 0;
+  }
 }
 </style>
 </head>
@@ -91,26 +100,30 @@ h2 {
         <li><input type="checkbox" onclick="toggleCheckbox(this)"> Option : Envoi d’un questionnaire préalable au client pour recueillir des informations de base avant l’entretien.</li>
       </ul>
     </li>
-    <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentations Mutuelles et Évaluation des Attentes
-      <ul>
-        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coaché se présente.</li>
-        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coach se présente à son tour.</li>
-        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentations Mutuelles et Évaluation des Attentes
-          <ul>
-            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coaché se présente.</li>
-            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coach se présente à son tour.</li>
-            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion sur les attentes et les objectifs spécifiques de la séance et du processus de coaching.</li>
-              <ul>
-                <li>Le coaché pourrait partager ses attentes envers le coaching, qu'il s'agisse de développement personnel, de résolution de problèmes spécifiques, ou de changement de comportement.</li>
-                <li>Le coach pourrait expliquer comment il envisage le processus de coaching, les méthodes qu'il utilise et comment il travaille avec ses clients.</li>
-                <li>Ensemble, le coaché et le coach pourraient définir des objectifs concrets et mesurables pour la séance et le parcours global de coaching.</li>
-                <li>Cette discussion peut également inclure la définition des indicateurs de réussite pour mesurer les progrès.</li>
-              </ul>
-          </ul>
-        </li>
-        
-      </ul>
-    </li>
+    <ul class="checklist">
+      <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentations Mutuelles et Évaluation des Attentes
+        <ul>
+          <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coaché se présente.</li>
+          <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coach se présente à son tour.</li>
+          <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion sur les attentes et les objectifs spécifiques de la séance et du processus de coaching. Établir une connexion authentique :
+            *Écouter attentivement les préoccupations du client.
+            *Comprendre les objectifs
+            <ul>
+              <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coaché pourrait partager ses attentes envers le coaching, qu'il s'agisse de développement personnel, de résolution de problèmes spécifiques, ou de changement de comportement.</li>
+              <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coach pourrait expliquer comment il envisage le processus de coaching, les méthodes qu'il utilise et comment il travaille avec ses clients.
+                <ul>
+                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Outil 1</li>
+                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Outil 2</li>
+                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Outil 3</li>
+                  <!-- Ajoutez autant d'éléments d'outils que nécessaire -->
+                </ul>
+              </li>
+              <li><input type="checkbox" onclick="toggleCheckbox(this)"> Ensemble, le coaché et le coach pourraient définir des objectifs concrets et mesurables pour la séance et le parcours global de coaching.</li>
+              <li><input type="checkbox" onclick="toggleCheckbox(this)"> Cette discussion peut également inclure la définition des indicateurs de réussite pour mesurer les progrès.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     <li><input type="checkbox" onclick="toggleCheckbox(this)"> Clarification du Déroulement des Séances
       <ul>
         <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentation du plan de la séance, y compris les tarifs, le déroulement, et le contenu des séances futures.</li>
@@ -149,10 +162,10 @@ h2 {
 </div>
 
 <script>
-function toggleCheckbox(checkbox) {
-  checkbox.parentNode.classList.toggle('checked', checkbox.checked);
-}
-</script>
+  function toggleCheckbox(checkbox) {
+    checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+  }
+  </script>
 
 </body>
 </html>
