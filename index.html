@@ -75,7 +75,24 @@ h2 {
     background-color: #085e79; /* Couleur de fond du bouton au survol */
 }
 
+ /* Style pour le lien */
+ .pdf-link {
+    color: #085e79; /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Met en gras le texte du lien */
+  }
 
+  /* Style pour l'indication */
+  .click-indicator {
+    font-size: 80%; /* Réduit la taille de la police */
+    margin-left: 5px; /* Ajoute un espacement à gauche */
+    color: #085e79; /* Couleur de l'indication */
+  }
+
+  /* Style pour le lien au survol de la souris */
+  .pdf-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+  }
 @media (max-width: 600px) {
   h1 {
     font-size: 24px;
@@ -113,63 +130,29 @@ h2 {
 
     <li><input type="checkbox" onclick="toggleCheckbox(this)"> Prise de contact Initiale
       <ul>
-        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion informelle pour établir un climat de confiance.</li>
-        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Option : Envoi d’un questionnaire préalable au client pour recueillir des informations de base avant l’entretien.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion informelle pour établir un climat de confiance (téléphonique ou présentielle)</li>
+        <p>ou</p>
+        <li>
+          <input type="checkbox" onclick="toggleCheckbox(this)">
+          <a class="pdf-link" href="anamnese.pdf" target="_blank">Envoi d’un questionnaire préalable au client.</a>
+          <span class="click-indicator">(cliquez pour voir le document)</span>
+        </li>
       </ul>
     </li>
     <ul class="checklist">
-      <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentations Mutuelles et Évaluation des Attentes
+      <li><input type="checkbox" onclick="toggleCheckbox(this)"> Présentation mutuelle et évaluation des attentes + RPBD
         <ul>
           <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coaché se présente.</li>
-          <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coach se présente à son tour.</li>
-          <li><input type="checkbox" onclick="toggleCheckbox(this)"> Discussion sur les attentes et les objectifs spécifiques de la séance et du processus de coaching. Établir une connexion authentique :
-            *Écouter attentivement les préoccupations du client.
-            *Comprendre les objectifs
+          <li><input type="checkbox" onclick="toggleCheckbox(this)"> RPBD (Raison, Problématique, Bénéfices, Durée) : Questionnement initial pour comprendre les attentes et les objectifs du coaché
             <ul>
               <li>
-                <input type="checkbox" onclick="toggleCheckbox(this)">
-                Le coaché pourrait partager ses attentes envers le coaching, qu'il s'agisse de développement personnel, de résolution de problèmes spécifiques, ou de changement de comportement.
-                <a href="seance2.html" class="button">Séance 2</a>
-            </li>
-            
-              <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>PROTOCOLES : </b>Le coach pourrait expliquer comment il envisage le processus de coaching, les méthodes qu'il utilise et comment il travaille avec ses clients.
-                <ul>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> RPBD – exploration de la demande 1ère séance</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Entretien de coaching = entretien de motivation + entretien d’objectif ou entretien de résolution de problème – exploration de la demande 2ème séance</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> SMARTE – smarter l’objectif</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> SCORE – outil de diagnostic. Permet de vérifier que l’on va dans la bonne direction, vient éclaircir la manière dont le problème se pose. Permet d’identifier des ressources</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Les 7 piliers – à faire faire au coaché entre les séances à partir de la deuxième. Outil de diagnostic qui permet de faire un état des lieux</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Décoder une émotion – décomposer et identifier les émotions qui sont présentes dans une expérience, mettre à jour le message que nous envoie cette émotion et définir comment y répondre</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Accompagnement émotionnel 7P - décomposer et identifier les émotions qui sont présentes dans une expérience, mettre à jour le message que nous envoie cette émotion et définir comment y répondre</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Ramollir une croyance (limitante) et insérer une croyance dans le système</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Niveaux logiques : vérifier que le coaché est en phase avec son objectif, identifier de quelle nature sont le ou les freins, programmer tout ce qui est nécessaire pour atteindre l’objectif</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Estime de soi – plusieurs protocoles : technique du modèle potentiel, technique du miracle, les 9 clés qui permettent d’augmenter l’estime de soi, la matrice de l’identité qui permet d’intégrer toutes les facettes de sa propre personnalité et de créer un nouveau soi.</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Analyse transactionnelle : plusieurs outils : les états du moi, les scénarios de vie, les drivers, les jeux relationnels</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le changement (Hudson) : outil principal : le modèle d’Hudson</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> La notion d’écologie</li>
-                  
-                  <!-- Ajoutez autant d'éléments d'outils que nécessaire -->
-                </ul>
+                <input type="checkbox" onclick="toggleCheckbox(this)">Le coaché partage ses attentes envers le coaching, (développement personnel, de résolution de problèmes spécifiques, ou de changement de comportement)
+                <a href="seance2.html" class="button">Problématique</a>
               </li>
-              <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>PROTOCOLES et OUTILS PNL :: </b>Le coach pourrait expliquer comment il envisage le processus de coaching, les méthodes qu'il utilise et comment il travaille avec ses clients.
-                <ul>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Les sous-modalités : permettent modification représentations d’une expérience par exemple</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le Meta-modèle (tout premier modèle de la PNL) : permet de questionner les structures linguistiques pour faire apparaître les éléments plus ou moins conscients et les amener à la partie consciente. On l’utilise en questionnant les omissions, généralisations et distorsions.</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le Milton-modèle : langage d’influence, on l’utilise pour suggérer, évoquer. Communication indirecte (cf hypnose)</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Index de computation : 3 portes d’entrée dans le fonctionnement d’une personne (pensées – PI, ressentis – EI, comportements – CE). Permet de relier les pensées aux ressentis aux actions, de développer le pôle le moins développé, permet de se connecter à l’autre</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Associations et dissociations</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Pont vers le futur</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Ancrages : protocoles pour poser une ancre, désactiver une ancre, empilement d’ancre, chaînage d’ancre, cercle de l’excellence</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> SWISH ou fondu enchaîné : pour modifier un comportement. Permet de passer d’une représentation limitative à une représentation qui offre plus de choix</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Stratégie « comme si » : améliorer un comportement ou installer un nouveau comportement</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> 3 positions de perception : très efficace en cas de conflits. Dissocier une partie inconfortable de l’expérience pour mieux la gérer et obtenir les différents points de vue</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Recadrage en 6 pas : quand une personne n’arrive pas à mettre en place un comportement ou arrêter un comportement pour une raison inconsciente. Permet de négocier entre les différentes parties de soi.</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Double dissociation : traitement des phobies. On ne confronte pas la personne à l’élément déclencheur.</li>
-                  <li><input type="checkbox" onclick="toggleCheckbox(this)"> Walt Disney : permet de stimuler la créativité par rapport à un projet, d’organiser et de vérifier sa faisabilité.</li>
-                      
-                  <!-- Ajoutez autant d'éléments d'outils que nécessaire -->
-                </ul>
-              </li>
+            </ul>
+     
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le coach se présente à son tour.</li>
+
               <li><input type="checkbox" onclick="toggleCheckbox(this)"> Ensemble, le coaché et le coach pourraient définir des objectifs concrets et mesurables pour la séance et le parcours global de coaching.</li>
               <li><input type="checkbox" onclick="toggleCheckbox(this)"> Cette discussion peut également inclure la définition des indicateurs de réussite pour mesurer les progrès.</li>
             </ul>
@@ -209,7 +192,54 @@ h2 {
         <li><input type="checkbox" onclick="toggleCheckbox(this)"> Encouragement du client à prendre des notes et à s’engager activement dans le processus.</li>
       </ul>
     </li>
+
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>PROTOCOLES : </b>Le coach pourrait expliquer comment il envisage le processus de coaching, les méthodes qu'il utilise et comment il travaille avec ses clients.
+      <ul>
+        <li>
+        <input type="checkbox" onclick="toggleCheckbox(this)">
+        <a class="pdf-link" href="RPBD.pdf" target="_blank">RPBD – exploration de la demande 1ère séance</a>
+        <span class="click-indicator">(cliquez pour voir le document)</span></li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Entretien de coaching = entretien de motivation + entretien d’objectif ou entretien de résolution de problème – exploration de la demande 2ème séance</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> SMARTE – smarter l’objectif</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> SCORE – outil de diagnostic. Permet de vérifier que l’on va dans la bonne direction, vient éclaircir la manière dont le problème se pose. Permet d’identifier des ressources</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Les 7 piliers – à faire faire au coaché entre les séances à partir de la deuxième. Outil de diagnostic qui permet de faire un état des lieux</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Décoder une émotion – décomposer et identifier les émotions qui sont présentes dans une expérience, mettre à jour le message que nous envoie cette émotion et définir comment y répondre</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Accompagnement émotionnel 7P - décomposer et identifier les émotions qui sont présentes dans une expérience, mettre à jour le message que nous envoie cette émotion et définir comment y répondre</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Ramollir une croyance (limitante) et insérer une croyance dans le système</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Niveaux logiques : vérifier que le coaché est en phase avec son objectif, identifier de quelle nature sont le ou les freins, programmer tout ce qui est nécessaire pour atteindre l’objectif</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Estime de soi – plusieurs protocoles : technique du modèle potentiel, technique du miracle, les 9 clés qui permettent d’augmenter l’estime de soi, la matrice de l’identité qui permet d’intégrer toutes les facettes de sa propre personnalité et de créer un nouveau soi.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Analyse transactionnelle : plusieurs outils : les états du moi, les scénarios de vie, les drivers, les jeux relationnels</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le changement (Hudson) : outil principal : le modèle d’Hudson</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> La notion d’écologie</li>
+        
+        <!-- Ajoutez autant d'éléments d'outils que nécessaire -->
+      </ul>
+    </li>
+
+
+
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>PROTOCOLES et OUTILS PNL :: </b>Le coach pourrait expliquer comment il envisage le processus de coaching, les méthodes qu'il utilise et comment il travaille avec ses clients.
+      <ul>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Les sous-modalités : permettent modification représentations d’une expérience par exemple</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le Meta-modèle (tout premier modèle de la PNL) : permet de questionner les structures linguistiques pour faire apparaître les éléments plus ou moins conscients et les amener à la partie consciente. On l’utilise en questionnant les omissions, généralisations et distorsions.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Le Milton-modèle : langage d’influence, on l’utilise pour suggérer, évoquer. Communication indirecte (cf hypnose)</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Index de computation : 3 portes d’entrée dans le fonctionnement d’une personne (pensées – PI, ressentis – EI, comportements – CE). Permet de relier les pensées aux ressentis aux actions, de développer le pôle le moins développé, permet de se connecter à l’autre</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Associations et dissociations</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Pont vers le futur</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Ancrages : protocoles pour poser une ancre, désactiver une ancre, empilement d’ancre, chaînage d’ancre, cercle de l’excellence</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> SWISH ou fondu enchaîné : pour modifier un comportement. Permet de passer d’une représentation limitative à une représentation qui offre plus de choix</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Stratégie « comme si » : améliorer un comportement ou installer un nouveau comportement</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> 3 positions de perception : très efficace en cas de conflits. Dissocier une partie inconfortable de l’expérience pour mieux la gérer et obtenir les différents points de vue</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Recadrage en 6 pas : quand une personne n’arrive pas à mettre en place un comportement ou arrêter un comportement pour une raison inconsciente. Permet de négocier entre les différentes parties de soi.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Double dissociation : traitement des phobies. On ne confronte pas la personne à l’élément déclencheur.</li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Walt Disney : permet de stimuler la créativité par rapport à un projet, d’organiser et de vérifier sa faisabilité.</li>
+            
+        <!-- Ajoutez autant d'éléments d'outils que nécessaire -->
+      </ul>
+    </li>
   </ul>
+
+  
 
 </div>
 
