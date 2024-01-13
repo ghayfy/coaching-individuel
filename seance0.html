@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan de la Première Séance de Coaching Individuel</title>
+<title>GUIDE DE COACHING Individuel</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -94,32 +94,37 @@ h2 {
   }
 
   
-    /* Style pour le Menu */
-  .navbar {
-            background-color: #085e79; /* Couleur de fond */
-            overflow: hidden;
-        }
+   /* Style pour le Menu */
+.navbar {
+    background-color: #085e79; /* Couleur de fond */
+    overflow: hidden;
+}
 
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2; /* Couleur du texte */
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Couleur du texte */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #ffffff; /* Séparateur blanc entre les onglets */
+}
 
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+/* Retirer le séparateur pour le dernier élément de la navbar */
+.navbar a:last-child, .navbar .dropdown:last-child .dropbtn {
+    border-right: none;
+}
 
-/* ... vos autres styles CSS ... */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
 /* Style pour le menu déroulant */
 .dropdown {
     float: left;
     overflow: hidden;
+    border-right: 1px solid #ffffff; /* Séparateur pour le menu déroulant */
 }
 
 .dropdown .dropbtn {
@@ -164,11 +169,6 @@ h2 {
     display: block;
 }
 
-
-
-
-/* ... vos autres styles CSS ... */
-
 /* Améliorations du style pour le bouton Burger */
 .burger {
     display: none;
@@ -186,7 +186,6 @@ h2 {
     outline: none;
 }
 
-/* Animation de l'icône burger */
 .burger:before, .burger:after {
     content: '';
     position: absolute;
@@ -239,31 +238,31 @@ h2 {
     }
 }
 
-
 @media (max-width: 600px) {
-  h1 {
-    font-size: 24px;
-  }
+    h1 {
+        font-size: 24px;
+    }
 
-  h2 {
-    font-size: 18px;
-  }
+    h2 {
+        font-size: 18px;
+    }
 
-  .checklist li {
-    padding: 10px;
-    margin: 10px 0;
-  }
-
-  .checklist li ul {
-    margin-left: 20px;
-  }
-
-  .checklist li ul li {
-    padding: 10px;
-    margin: 10px 0;
-  }
+    .checklist li {
+        padding: 10px;
+        margin:10px 0;
 }
+.checklist li ul {
+    margin-left: 20px;
+}
+
+.checklist li ul li {
+    padding: 10px;
+    margin: 10px 0;
+}
+}
+
 </style>
+
 
 </head>
 <body>
