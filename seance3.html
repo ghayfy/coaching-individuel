@@ -210,6 +210,102 @@ h2 {
     transition: all 0.3s ease;
 }
 
+
+textarea {
+  width: 100%; /* Utilisez toute la largeur disponible */
+  padding: 10px; /* Espace intérieur pour le confort de la frappe */
+  margin-top: 10px; /* Espace avant le textarea */
+  border: 1px solid #ddd; /* Style de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  font-family: Arial, sans-serif; /* Police cohérente avec le reste */
+}
+
+textarea:focus {
+  outline: none; /* Supprime la bordure de mise au point par défaut */
+  border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+.response-area {
+    width: 100%; /* Prend la largeur totale du parent */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+    padding: 10px; /* Espace intérieur pour le confort */
+    margin-top: 10px; /* Espacement au-dessus du textarea */
+    border: 1px solid #ddd; /* Style de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-family: Arial, sans-serif; /* Police cohérente */
+}
+
+.response-area:focus {
+    outline: none; /* Supprime la bordure de mise au point par défaut */
+    border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+
+
+#saveButton {
+    background-color: #085e79; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Padding autour du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition douce pour le survol */
+}
+
+#saveButton:hover {
+    background-color: #0a7ba8; /* Couleur de fond plus claire au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+
+.input-group {
+    display: flex; /* Utilise Flexbox pour la disposition */
+    justify-content: space-between; /* Répartit l'espace uniformément */
+    align-items: center; /* Alignement vertical des éléments */
+    margin-bottom: 15px; /* Espacement en dessous du groupe */
+}
+
+.input-field {
+    flex: 1; /* Chaque champ prend une part égale de l'espace */
+    margin-right: 10px; /* Espacement entre les champs */
+}
+
+.input-field:last-child {
+    margin-right: 0; /* Pas de marge à droite pour le dernier élément */
+}
+
+input[type="text"] {
+    width: 100%; /* Utilise la largeur totale de son conteneur */
+    padding: 8px; /* Padding confortable */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 4px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+input[type="text"]:focus {
+    border-color: #085e79; /* Couleur de la bordure lors de la sélection */
+    outline: none; /* Supprime la mise en valeur par défaut lors de la sélection */
+}
+
+label {
+    display: block; /* S'assure que le label est au-dessus de l'input */
+    margin-bottom: 5px; /* Espacement avant le champ de saisie */
+    color: #085e79; /* Couleur de texte #085e79 */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+
+@media screen and (max-width: 600px) {
+    .response-area {
+        border: 1px solid #ddd; /* Style de bordure */
+        /* Réduisez la ta
+        ille de la police ou ajustez le padding si nécessaire */
+    }
+}
+
+
 /* Cacher les liens de navigation sur les petits écrans */
 @media screen and (max-width: 600px) {
     .navbar-links {
@@ -265,8 +361,6 @@ h2 {
 
 
 </head>
-
-</head>
 <body>
 <!-- Menu Navbar avec bouton Burger -->
 <div class="navbar">
@@ -293,6 +387,7 @@ h2 {
     </div>
   </div>
 </div>
+
       
     
   <div class="container">
@@ -333,115 +428,360 @@ h2 {
     
 
       <ul class="checklist">
+                <!-- Nom et Prénom -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="firstName">Prénom:</label>
+                        <input type="text" id="firstName" placeholder="Entrez votre prénom">
+                    </div>
+                    <div class="input-field">
+                        <label for="lastName">Nom:</label>
+                        <input type="text" id="lastName" placeholder="Entrez votre nom">
+                    </div>
+                </div>
+
         <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Déroulé du protocole</b>
             <ul class="checklist">
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Définir et creuser le problème</b>
+
+                        <!-- Questions -->
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Quel est le problème ? Sur quel problème tu veux travailler aujourd’hui ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> C’était quand la dernière fois ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Dans quelles circonstances ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu as déjà essayé pour résoudre le problème ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> C’était quand la dernière fois que tu as essayé ça ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Est-ce que tu te souviens du moment précis où tu as essayé de faire ça et tu ne l’as pas fait ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> C’était où ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> C’était quand ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Je vais te proposer d’aller visiter ton problème donc de t’associer à ce moment-là, on est xxx, tu es xxx, tu t’apprêtes à xxx, tu fais xxx, tu vas xxx.</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Quelles difficultés rencontres-tu en ce moment ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            C'était quand la dernière fois ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Dans quelles circonstances ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu'est-ce que tu as déjà essayé pour résoudre le problème ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            C'était quand la dernière fois que tu as essayé ça ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Est-ce que tu te souviens du moment précis où tu as essayé de faire ça et tu ne l'as pas fait ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            C'était où ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            C'était quand ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Je vais te proposer d'aller visiter ton problème donc de t'associer à ce moment-là, on est xxx, tu es xxx, tu t'apprêtes à xxx, tu fais xxx, tu vas xxx.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                         <!-- Ajoutez autant d'éléments d'outils que nécessaire -->
                     </ul>
                 </li>
     
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>La transformation en position Méta et la reformulation des symptômes</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Je te propose de faire un pas en arrière et d’aller sur la position Meta. Là tu te regardes. Tu vois [prénom], il ressent xxx, xxx et xxx. Est-ce que tu vois autre chose ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Tu le vois en train de faire xxx, qu’est-ce que tu te dis ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu perçois ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu penses ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu as envie de lui dire ?</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Je te propose de faire un pas en arrière et d’aller sur la position Meta. Là tu te regardes. Tu vois [prénom], il ressent xxx, xxx et xxx. Est-ce que tu vois autre chose ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Tu le vois en train de faire xxx, qu’est-ce que tu te dis ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu perçois ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu penses ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu as envie de lui dire ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                     </ul>
                 </li>
                 
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Réassociation du 'C' de causes avec la situation</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Tu es [endroit], en train de xxx. Selon toi, qu’est-ce qui est la cause de ces symptômes à ce moment précis ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce qui déclenche ça ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> C’est à cause de quoi ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> C’est à cause de qui ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Tu as ressenti xxx, quelle est la raison selon toi de ce ressenti ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Donc la cause de ces symptômes selon toi, c’est xxx ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Est-ce qu’il y aurait autre chose qui déclenche ça ?</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Tu es [endroit], en train de xxx. Selon toi, qu’est-ce qui est la cause de ces symptômes à ce moment précis ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce qui déclenche ça ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            C’est à cause de quoi ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            C’est à cause de qui ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Tu as ressenti xxx, quelle est la raison selon toi de ce ressenti ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Donc la cause de ces symptômes selon toi, c’est xxx ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Est-ce qu’il y aurait autre chose qui déclenche ça ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                     </ul>
                 </li>
                 
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Passage à la position Méta ensuite</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Je te propose de retourner en position Méta et de t’observer un peu. Quand tu vois [prénom] avec ses causes de ces symptômes, c’est-à-dire xxx, qu’est-ce que tu te dis ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu en penses ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Est-ce que tu vois autre chose ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu perçois ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu as envie de lui dire ?</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Je te propose de retourner en position Méta et de t’observer un peu. Quand tu vois [prénom] avec ses causes de ces symptômes, c’est-à-dire xxx, qu’est-ce que tu te dis ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu en penses ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Est-ce que tu vois autre chose ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu perçois ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu as envie de lui dire ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                     </ul>
                 </li>
                 
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Réassociation du 'O' de objectif avec la situation</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this )"> Tu es [à cet endroit], en train de xxx, à ce moment précis, dans cette situation. Qu’est-ce que tu voudrais faire et que tu n’arrives pas à faire ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu veux à ce moment-là ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Est-ce que tu vois autre chose ?</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Tu es [à cet endroit], en train de xxx, à ce moment précis, dans cette situation. Qu’est-ce que tu voudrais faire et que tu n’arrives pas à faire ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu veux à ce moment-là ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Est-ce que tu vois autre chose ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                      </ul>
                         
                 </li>
                       
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Re - Passage à la position Méta</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Je te propose de retourner en position Méta, en position d’observateur, quand tu vois [prénom] qui n’arrive pas à xxx, qu’est-ce que ça t’évoque ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu en penses ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Est-ce que tu vois autre chose ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu perçois ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu as envie de lui dire ?</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Je te propose de retourner en position Méta, en position d’observateur, quand tu vois [prénom] qui n’arrive pas à xxx, qu’est-ce que ça t’évoque ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu en penses ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Est-ce que tu vois autre chose ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu perçois ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu as envie de lui dire ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                     </ul>
                 </li>
                 
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Exploration approfondie du 'R' de ressources et sa réassociation avec la situation</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Je te propose de retourner [à cet endroit], tu es en train de xxx, à ce moment précis. Tu as besoin de quoi pour [atteindre objectif] ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Quelles sont les ressources dont tu as besoin à ce moment-là spécifiquement ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Que peux-tu faire pour contacter cette ressource ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Y-a-t'il d’autres ressources dont tu aurais besoin ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu mets derrière [ressource] ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Donc les ressources dont tu as besoin, c’est xxx, xxx et xxx ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Est-ce que tu vois autre chose ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Tu as trouvé tes ressources, qu’est-ce qui t’empêche d’atteindre ton objectif ? [si une nouvelle cause apparait, reprendre à causes]</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Je te propose de retourner [à cet endroit], tu es en train de xxx, à ce moment précis. Tu as besoin de quoi pour [atteindre objectif] ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Quelles sont les ressources dont tu as besoin à ce moment-là spécifiquement ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Que peux-tu faire pour contacter cette ressource ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Y-a-t-il d’autres ressources dont tu aurais besoin ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu mets derrière [ressource] ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Donc les ressources dont tu as besoin, c’est xxx, xxx et xxx ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Est-ce que tu vois autre chose ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Tu as trouvé tes ressources, qu’est-ce qui t’empêche d’atteindre ton objectif ? [si une nouvelle cause apparaît, reprendre à causes]
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                     </ul>
                 </li>
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Re - Passage à la position Méta</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Je te laisse regarder [prénom] qui [ressource], qu’est-ce que tu en penses ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que ça t’évoque ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Est-ce que tu vois autre chose ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu perçois ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu as envie de lui dire ?</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Je te laisse regarder [prénom] qui [ressource], qu’est-ce que tu en penses ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que ça t’évoque ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Est-ce que tu vois autre chose ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu perçois ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Qu’est-ce que tu as envie de lui dire ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                     </ul>
                 </li>
                 
 
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Analyse des 'E' de effets</b>
                     <ul class="checklist">
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Quand tu sais que tu as réussi à contacter tes ressources, qu’est-ce que tu atteins ?</li>
-                        <li><input type="checkbox" onclick="toggleCheckbox(this)"> Quand tu sais contacter ces ressources de xxx, de xxx et de xxx, qu’est-ce qui est important pour toi ?</li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Quand tu sais que tu as réussi à contacter tes ressources, qu’est-ce que tu atteins ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            Quand tu sais contacter ces ressources de xxx, de xxx et de xxx, qu’est-ce qui est important pour toi ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        
                     </ul>  
                 </li>
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Temps de conclusion</b>
                         <ul class="checklist">
-                            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Quand tu regardes maintenant ce problème que nous venons de visiter à travers différentes positions de perception, qu’est-ce que tu en penses ?</li>
-                            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Qu’est-ce que tu te dis ?</li>
-                            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Comment tu perçois les choses ?</li>
+                            <li>
+                                <input type="checkbox" onclick="toggleCheckbox(this)">
+                                Quand tu regardes maintenant ce problème que nous venons de visiter à travers différentes positions de perception, qu’est-ce que tu en penses ?
+                                <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                            </li>
+                            <li>
+                                <input type="checkbox" onclick="toggleCheckbox(this)">
+                                Qu’est-ce que tu te dis ?
+                                <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                            </li>
+                            <li>
+                                <input type="checkbox" onclick="toggleCheckbox(this)">
+                                Comment tu perçois les choses ?
+                                <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                            </li>
+                            
                         </ul>
                 </li>
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Temps de feed-back</b>
                         <ul class="checklist">
-                            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Comment ça s’est passé pour toi ?</li>
-                            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Comment tu te sens ?</li>
-                            <li><input type="checkbox" onclick="toggleCheckbox(this)"> Sur quoi tu peux t’engager ?</li>
+                            <li>
+                                <input type="checkbox" onclick="toggleCheckbox(this)">
+                                Comment ça s’est passé pour toi ?
+                                <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                            </li>
+                            <li>
+                                <input type="checkbox" onclick="toggleCheckbox(this)">
+                                Comment tu te sens ?
+                                <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                            </li>
+                            <li>
+                                <input type="checkbox" onclick="toggleCheckbox(this)">
+                                Sur quoi tu peux t’engager ?
+                                <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                            </li>
+                            
                         </ul>
                 </li>                
 
@@ -449,25 +789,64 @@ h2 {
 
         </li>
       </ul>
+      <button id="saveButton"><b>Enregistrer les réponses</b></button> 
     </div>
   
 
-  <script>
-    function toggleCheckbox(checkbox) {
-        checkbox.parentNode.classList.toggle('checked', checkbox.checked);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const burger = document.querySelector('.burger');
-      const navLinks = document.querySelector('.navbar-links');
-
-      burger.addEventListener('click', function () {
-          navLinks.classList.toggle('nav-active');
+    <script>
+        function toggleCheckbox(checkbox) {
+            checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+          const burger = document.querySelector('.burger');
+          const navLinks = document.querySelector('.navbar-links');
+    
+          burger.addEventListener('click', function () {
+              navLinks.classList.toggle('nav-active');
+          });
       });
-  });
-
-
-</script>
-  
-  </body>
-  </html>
+    
+    
+    
+    
+    document.getElementById('saveButton').addEventListener('click', function() {
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
+        let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
+        let allResponsesFilled = true;
+    
+        checklistItems.forEach((textarea, index) => {
+            const question = textarea.closest('li').innerText.split('\n')[0].trim();
+            const answer = textarea.value.trim();
+            if (!answer) {
+                allResponsesFilled = false;
+            }
+            responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
+        });
+    
+        if (!firstName || !lastName) {
+            alert("Veuillez entrer votre nom et votre prénom.");
+            return;
+        }
+    
+        if (!allResponsesFilled) {
+            alert("Veuillez répondre à toutes les questions avant de soumettre.");
+            return;
+        }
+    
+        const blob = new Blob([responses], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${firstName}_${lastName}_reponses.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+    </script>
+    
+      
+      </body>
+      </html>
+    
