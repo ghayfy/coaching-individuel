@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUIDE DE COACHING Individuel</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 0;
+  color: #085e79; /* Couleur du texte */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #126781; /* Couleur du texte */
+  text-align: center;
+  font-size: 32px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #126781; /* Couleur du texte */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.checklist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  transition: all 0.5s ease;
+}
+
+.checklist li.checked {
+  background-color: #d4edda; /* Couleur de fond quand cochée (vert pâle) */
+  border-color: #c3e6cb; /* Couleur de la bordure quand cochée (vert) */
+}
+
+.checklist li:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #085e79; /* Couleur de fond du bouton (bleu similaire) */
+    color: #fff; /* Couleur du texte du bouton */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #085e79; /* Couleur de fond du bouton au survol */
+}
+
+ /* Style pour le lien */
+ .pdf-link {
+    color: #085e79; /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Met en gras le texte du lien */
+  }
+
+  /* Style pour l'indication */
+  .click-indicator {
+    font-size: 80%; /* Réduit la taille de la police */
+    margin-left: 5px; /* Ajoute un espacement à gauche */
+    color: #085e79; /* Couleur de l'indication */
+  }
+
+  /* Style pour le lien au survol de la souris */
+  .pdf-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+  }
+
+  
+   /* Style pour le Menu */
+.navbar {
+    background-color: #085e79; /* Couleur de fond */
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Couleur du texte */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #ffffff; /* Séparateur blanc entre les onglets */
+}
+
+/* Retirer le séparateur pour le dernier élément de la navbar */
+.navbar a:last-child, .navbar .dropdown:last-child .dropbtn {
+    border-right: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style pour le menu déroulant */
+.dropdown {
+    float: left;
+    overflow: hidden;
+    border-right: 1px solid #ffffff; /* Séparateur pour le menu déroulant */
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Améliorations du style pour le bouton Burger */
+.burger {
+    display: none;
+    position: relative;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+.burger:before, .burger:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.burger:before {
+    transform: translate(-50%, -10px);
+}
+
+.burger:after {
+    transform: translate(-50%, 8px);
+}
+
+/* Style pour les liens de navigation */
+.navbar-links {
+    transition: all 0.3s ease;
+}
+
+
+textarea {
+  width: 100%; /* Utilisez toute la largeur disponible */
+  padding: 10px; /* Espace intérieur pour le confort de la frappe */
+  margin-top: 10px; /* Espace avant le textarea */
+  border: 1px solid #ddd; /* Style de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  font-family: Arial, sans-serif; /* Police cohérente avec le reste */
+}
+
+textarea:focus {
+  outline: none; /* Supprime la bordure de mise au point par défaut */
+  border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+.response-area {
+    width: 100%; /* Prend la largeur totale du parent */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+    padding: 10px; /* Espace intérieur pour le confort */
+    margin-top: 10px; /* Espacement au-dessus du textarea */
+    border: 1px solid #ddd; /* Style de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-family: Arial, sans-serif; /* Police cohérente */
+}
+
+.response-area:focus {
+    outline: none; /* Supprime la bordure de mise au point par défaut */
+    border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+
+
+#saveButton {
+    background-color: #085e79; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Padding autour du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition douce pour le survol */
+}
+
+#saveButton:hover {
+    background-color: #0a7ba8; /* Couleur de fond plus claire au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+
+.input-group {
+    display: flex; /* Utilise Flexbox pour la disposition */
+    justify-content: space-between; /* Répartit l'espace uniformément */
+    align-items: center; /* Alignement vertical des éléments */
+    margin-bottom: 15px; /* Espacement en dessous du groupe */
+}
+
+.input-field {
+    flex: 1; /* Chaque champ prend une part égale de l'espace */
+    margin-right: 10px; /* Espacement entre les champs */
+}
+
+.input-field:last-child {
+    margin-right: 0; /* Pas de marge à droite pour le dernier élément */
+}
+
+input[type="text"] {
+    width: 100%; /* Utilise la largeur totale de son conteneur */
+    padding: 8px; /* Padding confortable */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 4px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+input[type="text"]:focus {
+    border-color: #085e79; /* Couleur de la bordure lors de la sélection */
+    outline: none; /* Supprime la mise en valeur par défaut lors de la sélection */
+}
+
+label {
+    display: block; /* S'assure que le label est au-dessus de l'input */
+    margin-bottom: 5px; /* Espacement avant le champ de saisie */
+    color: #085e79; /* Couleur de texte #085e79 */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+
+/* EXERCICE PILIER */
+.exercise-container {
+  border: 2px solid #085e79;
+  padding: 20px;
+  text-align: center;
+}
+
+.exercise-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.exercise-button {
+  background-color: #085e79;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animation de transition de couleur de fond */
+}
+
+.exercise-button:hover {
+  background-color: #064d63; /* Changement de couleur de fond au survol */
+}
+
+.exercise-button:focus {
+  outline: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .response-area {
+        border: 1px solid #ddd; /* Style de bordure */
+        /* Réduisez la ta
+        ille de la police ou ajustez le padding si nécessaire */
+    }
+}
+
+
+/* Cacher les liens de navigation sur les petits écrans */
+@media screen and (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+        background-color: #085e79;
+        padding-top: 20px;
+    }
+
+    .navbar-links.nav-active {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .checklist li {
+        padding: 10px;
+        margin:10px 0;
+}
+.checklist li ul {
+    margin-left: 20px;
+}
+
+.checklist li ul li {
+    padding: 10px;
+    margin: 10px 0;
+}
+}
+
+</style>
+
+
+</head>
+<body>
+<!-- Menu Navbar avec bouton Burger -->
+<div class="navbar">
+  <button class="burger">
+      ☰
+  </button>
+  <div class="navbar-links">
+    <a href="index.html">Processus</a>
+    <a href="seance1.html">Séance 1</a>
+    <a href="seance2.html">Séance 2</a>
+    <a href="seance3.html">Séance 3</a>
+    <a href="seance4.html">Séance 4</a>
+    <a href="seance5.html">Séance 5</a>
+    <a href="seance6.html">Séance 6</a>
+    <a href="seance7.html">Séance 7</a>
+    <a href="seance8.html">Séance 8</a>
+    <a href="seance9.html">Séance 9</a>
+    <div class="dropdown">
+        <button class="dropbtn">Protocole</button>
+        <div class="dropdown-content">
+            <a href="./PROTOCOLES/Les 7 piliers de vie.pdf">Les 7 piliers de vie</a></a>
+            <a href="#protocole2">Protocole 2</a>
+        </div>
+    </div>
+</div>
+</div>
+
+  <div class="container">
+      <h1>SEANCE 6 – COACHING DES EMOTIONS</h1> 
+
+      <div class="container">
+        <p>
+            On utilise le coaching des émotions lorsque le coaché arrive avec beaucoup d’émotion en séance. Si cela n’arrive pas, on peut le faire à la séance 7 dans les cas suivants :
+        </p>
+        <ul>
+            <li>L’objectif concerne la gestion des émotions</li>
+            <li>On identifie qu’une émotion entre en jeu dans l’atteinte de l’objectifStructurer et décortiquer la situation-problème</li>
+            <li>Le coaché est trop dans la pensée et pas assez dans les émotions</li>
+        </ul>
+        <p>
+            Lors des premiers entretiens, on aura noté si le coaché fait référence à des peurs, à des freins.
+        </p>
+
+    
+        <p><b>Quels sont les émotions et les ressentis, quelle est leur utilité ?</b></p>
+        <p>
+            L’émotion nous informe de comment on est en train de vivre une situation, elle nous parle de nous-même. 
+            Elle est en lien avec notre carte du monde. Elle a pour rôle de mobiliser l’énergie nécessaire à l’adaptation, à la réponse. 
+            C’est in message, un indicateur, une boussole, un tableau de bord. Elle est là pour être lue, décryptée. 
+            Notre vie émotionnelle fait office de filtre entre l’extérieur et l’intérieur.
+        </p>
+        <p>
+            La nature de l’émotion dépend du sens que nous attribuons à ce que nous sommes en train de vivre. 
+            Les émotions et la raison constituent un tout global qui appartient à notre identité. 
+            Nous sommes faits d’émotions et de raison et nous passons sans cesse de l’un à l’autre.
+        </p>
+        <p>
+            Les émotions sont vécues dans le corps et influencent nos comportements. 
+            Elles dirigent nos choix, peuvent altérer notre relation au réel, entraîne nos succès et nos défaites, elles organisent notre mémoire. 
+            Elles nous invitent à changer nos stratégies et nos actions. Une émotion va se manifester jusqu’à ce que l’on entende son message. 
+            Les causes de nos émotions nous sont rarement claires et nous avons tendance à les trouver irrationnelles, ce qui est une grave erreur. 
+            Plus nos émotions sont conscientes, plus l’on gagne en liberté.
+        </p>
+        <p>
+            Il y a 2 catégories d’émotions :
+        </p>
+        <ul>
+            <li>Les états ressources : agréables et appropriés à la situation donnée</li>
+            <li>Les états limitants : vécus comme insatisfaisants ou douloureux qui rétrécissent le champ des options envisageables dans une situation donnée.</li>
+        </ul>
+        <p>
+            Nos émotions peuvent nous faire peur car elles nous obligent à regarder en face une réalité que l’on ne veut pas forcément voir. 
+            Réprimer nos émotions ou les déguiser pour les rendre socialement acceptables nous amène à perdre des informations précieuses sur nous-même.
+        </p>
+        <p>
+            Rationaliser l’émotion permet de la décentrer. Pour dégonfler une émotion, on questionne la pensée. 
+            L’émotion reste présente mais est moins dense.
+        </p>
+        <p>
+            Souffrir émotionnellement, c’est bloquer l’émotion. 
+            Les émotions qui restent sous silence creusent un fossé entre les personnes. 
+            Ce n’est pas parce qu’une émotion ne se voit pas qu’elle n’existe pas. 
+            Elle peut faire mal longtemps si elle n’a pas d’espace pour s’exprimer. 
+            On pète un plomb quand la coupe est pleine, souvent ce qui nous fait réagir est une goutte d’eau parce que l’on n’écoute pas suffisamment le message que nous transmet une émotion. 
+            Le déni des émotions a pour fonction de protéger une personnalité construite sous la pression des circonstances, des compromis, 
+            sous une exigence d’uniformisation en termes de perceptions, d’émotions, de pensées, de comportements. Lorsque les émotions sont réprimées, on peut aller jusqu’à ressentir un malaire physiquement. 
+            Le lien corps / esprit va créer la somatisation pour continuer à délivrer son message. 
+            Les personnes qui ne ressentent plus rien sont déconnectées d’elles-mêmes. 
+            On peut retrouver une émotion refoulée en décodant les manifestations physiques (gorge nouée, jambes coupées, etc.)
+        </p>
+        <p><b>Il y a 4 émotions simples :</b></p>
+        <ul>
+            <li>
+                La peur : elle fait référence à la mort. La peur rationnelle est ok. La peur irrationnelle est à décrypter et à rationaliser, 
+                elle fait souvent référence à une réalité fantasmée. 
+                La peur peut révéler une croyance limitante. Elle engendre des blocages qui empêchent la personne d’atteindre ses objectifs.
+            </li>
+            <li>
+                La colère : elle est en lien avec un sentiment d’injustice. Il peut s’agir également de la menace de notre carte du monde. 
+                L’expression de la colère est fondamentale dans la construction de notre identité, de notre jugement, de notre autonomie. 
+                Elle offre l’énergie de l’affirmation de soi. Elle sert au maintien de nos frontières corporelles, psychologiques ou sociales ou à la défense de nos droits. 
+                Il va falloir repérer quelle valeur, quelle limite a été transgressée et se demander si cette valeur et cette limite est adaptée au contexte, 
+                se demander si la personne contre laquelle nous sommes en colère est au courant de cette limite (« est-ce que les gens savent que s’ils font cela, ils touchent à ta valeur x ou y ? »). 
+                Ne pas confondre avec violence et prise de pouvoir.
+                     <!-- Ajouter l'image centrée -->
+                <div style="text-align: center;">
+                    <img src="./images/colere.png" alt="Image de la pyramide" width="50%">
+                </div>
+            </li>
+            <li>
+                La tristesse : quand on perd quelque chose ou quelqu’un. 
+                Elle est vécu comme une émotion négative mais elle indique qu’on ne peut pas être plus vas, que l’on a passé les étapes les plus difficiles et que l’on va pouvoir passer à autre chose. 
+                La tristesse est nécessaire à notre apprentissage. 
+                C’est le point bas de la courbe du changement.
+            </li>
+            <li>
+                La joie : elle nous informe que l’on est aligné et quel est le bon chemin à prendre pour soi
+            </li>
+            <p><b>Les émotions complexes :</b></p> 
+            <p>
+                Elles sont composées de plusieurs émotions, les unes pouvant amplifier ou contrer les autres. 
+                Il est nécessaire de les décomposer pour comprendre leurs rouages et leurs sens. <br>
+                Exemple : honte = peur + tristesse, culpabilité = peur + colère.
+            </p>
+            <p><b>Les émotions racket (cf analyse transactionnelle) :</b></p> 
+            <p>
+                Quand une émotion est exprimée à la place d’une autre. 
+                Par exemple : être en colère alors que l’on a peur, être en colère alors que l’on est triste. 
+                Une émotion est mise en avant pour en dissimuler une autre de manière systématique et répétitive. 
+                Elle ne correspond pas à la situation, est basée sur un système de croyance (je n’ai pas le droit d’être triste, 
+                je n’ai pas le droit d’être en colère, je n’ai pas le droit d’avoir peur), peuvent se construire avec l’éducation, 
+                la culture, les expériences. C’est un processus inconscient, la personne se trompe d’abord elle-même. 
+                Certains tirent des bénéfices de leurs excès émotifs et du pouvoir qu’ils confèrent, 
+                vont jusqu’à contrôler l’entourage en lui faisant peur, en l’amenant à ménager la personne. 
+                Elles mettent une distance avec autrui qui peut se sentir manipulé.
+            </p>
+            <p>
+                Pour les déceler, utiliser la roue des émotions. 
+                Repérer les mots employés par le coaché. Ne pas lui montrer la roue.
+            </p>
+
+            <p><b>Les sentiments / ressentis :</b></p> 
+            <p>
+                Les émotions sont vécues en premier dans le corps, elles sont biologiques, pulsionnelles. 
+                Les sentiments viennent de nos pensées et de notre lecteur de l’émotion. 
+                Un sentiment est un état affectif plus complexe, plus stable et plus durable que l’émotion. Il est lié à des représentations. 
+                Il est construit, élaboré. Exemple : on peut ressentir l’émotion de peur et le sentiment d’insécurité.
+            </p>
+            <p>
+                Les émotions sont vécues en premier dans le corps, elles sont biologiques, pulsionnelles. 
+                Les sentiments viennent de nos pensées et de notre lecteur de l’émotion. Un sentiment est un état affectif plus complexe, plus stable et plus durable que l’émotion. 
+                Il est lié à des représentations. 
+                Il est construit, élaboré. Exemple : on peut ressentir l’émotion de peur et le sentiment d’insécurité.
+            </p>
+            <p>
+                Exemples de sentiments : angoisse, trahison, abandon, frustration, déception.
+            </p>
+            <p>
+                Il est utile d’apporter l’ensemble de ce contenu au coaché.
+            </p>
+            <p><b>Protocole : Stratégie d’accompagnement émotionnel – les 7 P</b></p> 
+            <p>
+                L’idéal est de travailler alors même que le coaché arrive en séance avec beaucoup d’émotion. 
+                Ne pas hésiter à faire le protocole dans ce cas, même si l’on avait prévu autre chose.
+            </p>
+
+        </ul>
+      </div>
+    
+
+      <ul class="checklist">
+                <!-- Nom et Prénom -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="firstName">Prénom:</label>
+                        <input type="text" id="firstName" placeholder="Entrez votre prénom">
+                    </div>
+                    <div class="input-field">
+                        <label for="lastName">Nom:</label>
+                        <input type="text" id="lastName" placeholder="Entrez votre nom">
+                    </div>
+                </div>
+
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Déroulé du protocole des 7 P</b>
+            <ul class="checklist">
+                <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1.Présentation</b>
+
+                        <!-- Questions -->
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)">
+                            le coaché présente la situation dans laquelle la gestion des émotions est difficile. 
+                            On va lui demander quelle est la situation, lui faire décrire le plus précisément possible 
+                            et l’associer à la situation (cf VAKOG – niveaux logiques)
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li> 
+                    </ul>
+                </li>
+                <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2.Perception</b>
+
+                    <!-- Questions -->
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)">
+                        le coaché va exprimer son ressenti, les émotions et sentiments qui le dérangent. 
+                        On va lui demander « qu’est-ce que tu ressens précisément ? et puis quoi encore ? et puis quoi encore ? ». 
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li> 
+                </ul>
+            </li>
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>3.Pluralité </b>
+
+                <!-- Questions -->
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)">
+                    on va amener le coaché à se rendre compte qu’il peut vivre plusieurs sentiments et émotions dans une même situation et qu’il convient de les identifier. 
+                    On va lui demander : « selon toi, quels sont les différents sentiments et émotions qui composent cette expérience ? » 
+                    On va récolter plusieurs émotions et ressentis (de 4 à 10).
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li> 
+            </ul>
+        </li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>4.Prioriser </b>
+
+            <!-- Questions -->
+        <ul class="checklist">
+            <li>
+                <input type="checkbox" onclick="toggleCheckbox(this)">
+                on va amener le coaché à hiérarchiser en % la place que prend chacun de ses sentiments dans son expérience. 
+                On va lui demander : « quelle importance tu donnes en % à cette émotion ? à ce sentiment ? à cet autre sentiment ? etc ». 
+                On va reformuler les émotions et ressentis avec leurs pourcentages 
+                (« donc là tu ressens de la peur à 80%, de la frustration à 50%, de la colère à 70% et de la honte à 60% »).
+                <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+            </li> 
+        </ul>
+    </li>
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>5.Positiver</b>
+
+        <!-- Questions -->
+    <ul class="checklist">
+        <li>
+            <input type="checkbox" onclick="toggleCheckbox(this)">
+            : on va amener le coaché à clarifier le message que lui envoie les émotions et les ressentis 
+            et il va prendre conscience de sa raison d’être. 
+            On va lui demander : « si chaque émotion et chaque sentiment était porteur d’un message de changement pour toi, 
+            quel serait le message de chacune de tes émotions et de chacun de tes sentiments ? ». 
+            Il doit donner des messages que ces émotions et sentiments lui adressent à lui-même. 
+            On va reformuler : « donc si je comprends bien, la peur que tu ressens à 80% t’adresse le message de changer de boulot etc ». 
+            Les messages doivent être formulés de manière positive. On peut lui faire écrire les messages. 
+            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+        </li> 
+    </ul>
+</li>
+<li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>6.Planifier</b>
+
+    <!-- Questions -->
+<ul class="checklist">
+    <li>
+        <input type="checkbox" onclick="toggleCheckbox(this)">
+        on va amener le coaché à clarifier les actions à poser afin de répondre à l’intelligence de l’émotion et donc au message. 
+        On va lui demander : « quelles sont les actions que tu dois poser en réponse à chaque sentiment et à chaque émotion ? ». 
+        Les actions doivent être formulées de manière positive et être écologique pour le coaché.
+        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+    </li> 
+</ul>
+</li>
+<li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>7.Programmer </b>
+
+    <!-- Questions -->
+<ul class="checklist">
+    <li>
+        <input type="checkbox" onclick="toggleCheckbox(this)">
+        on va amener le coaché à se mettre en action : « par quoi vas-tu commencer ? ».
+        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+    </li> 
+</ul>
+</li>
+                       
+
+
+
+        </li>
+      </ul>
+      <button id="saveButton"><b>Enregistrer les réponses</b></button> 
+      <br><br>
+      <div class="exercise-container">
+        <p class="exercise-title">Exercice (s)</p>
+        <p>À la fin de chaque séance, le coach propose à son client l'exercice des '7 piliers de vie'. Pendant cet exercice, on explique au client de quoi il s’agit et on lui demande de réfléchir à l'un des sept piliers entre cette séance et la suivante, avec un feedback sur la thématique au début de la séance suivante.</p>
+
+        <p>Les 7 piliers sont :</p>
+        <ul>
+          <li>Les valeurs : à la fin de la séance 2</li>
+          <li>Les besoins : à la fin de la séance 3</li>
+          <li>L'intégrité : à la fin de la séance 4</li>
+          <li>Le positivisme : à la fin de la séance 5</li>
+          <li>Poser ses limites : à la fin de la séance 6</li>
+          <li>Le réseau relationnel : à la fin de la séance 7</li>
+          <li>Rendre le présent parfait : à la fin de la séance 8</li>
+        </ul>
+        <p>Cela permet d'évaluer son état actuel, d'explorer des thèmes importants, d'identifier les obstacles, et de se préparer pour la séance suivante.</p>
+        
+        <a href="./PROTOCOLES/Les 7 piliers de vie.pdf" class="exercise-button"> Les 7 piliers de vie</a>
+      </div>
+
+    </div>
+          
+
+    <script>
+        function toggleCheckbox(checkbox) {
+            checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+          const burger = document.querySelector('.burger');
+          const navLinks = document.querySelector('.navbar-links');
+    
+          burger.addEventListener('click', function () {
+              navLinks.classList.toggle('nav-active');
+          });
+      });
+    
+    
+    
+    
+    document.getElementById('saveButton').addEventListener('click', function() {
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
+        let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
+        let allResponsesFilled = true;
+    
+        checklistItems.forEach((textarea, index) => {
+            const question = textarea.closest('li').innerText.split('\n')[0].trim();
+            const answer = textarea.value.trim();
+            if (!answer) {
+                allResponsesFilled = false;
+            }
+            responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
+        });
+    
+        if (!firstName || !lastName) {
+            alert("Veuillez entrer votre nom et votre prénom.");
+            return;
+        }
+    
+        if (!allResponsesFilled) {
+            alert("Veuillez répondre à toutes les questions avant de soumettre.");
+            return;
+        }
+    
+        const blob = new Blob([responses], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${firstName}_${lastName}_reponses.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+    </script>
+    
+      
+      </body>
+      </html>
+    
