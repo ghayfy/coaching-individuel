@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUIDE DE COACHING Individuel</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 0;
+  color: #085e79; /* Couleur du texte */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #126781; /* Couleur du texte */
+  text-align: center;
+  font-size: 32px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #126781; /* Couleur du texte */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.checklist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  transition: all 0.5s ease;
+}
+
+.checklist li.checked {
+  background-color: #d4edda; /* Couleur de fond quand cochée (vert pâle) */
+  border-color: #c3e6cb; /* Couleur de la bordure quand cochée (vert) */
+}
+
+.checklist li:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #085e79; /* Couleur de fond du bouton (bleu similaire) */
+    color: #fff; /* Couleur du texte du bouton */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #085e79; /* Couleur de fond du bouton au survol */
+}
+
+ /* Style pour le lien */
+ .pdf-link {
+    color: #085e79; /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Met en gras le texte du lien */
+  }
+
+  /* Style pour l'indication */
+  .click-indicator {
+    font-size: 80%; /* Réduit la taille de la police */
+    margin-left: 5px; /* Ajoute un espacement à gauche */
+    color: #085e79; /* Couleur de l'indication */
+  }
+
+  /* Style pour le lien au survol de la souris */
+  .pdf-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+  }
+
+  
+   /* Style pour le Menu */
+.navbar {
+    background-color: #085e79; /* Couleur de fond */
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Couleur du texte */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #ffffff; /* Séparateur blanc entre les onglets */
+}
+
+/* Retirer le séparateur pour le dernier élément de la navbar */
+.navbar a:last-child, .navbar .dropdown:last-child .dropbtn {
+    border-right: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style pour le menu déroulant */
+.dropdown {
+    float: left;
+    overflow: hidden;
+    border-right: 1px solid #ffffff; /* Séparateur pour le menu déroulant */
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Améliorations du style pour le bouton Burger */
+.burger {
+    display: none;
+    position: relative;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+.burger:before, .burger:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.burger:before {
+    transform: translate(-50%, -10px);
+}
+
+.burger:after {
+    transform: translate(-50%, 8px);
+}
+
+/* Style pour les liens de navigation */
+.navbar-links {
+    transition: all 0.3s ease;
+}
+
+
+textarea {
+  width: 100%; /* Utilisez toute la largeur disponible */
+  padding: 10px; /* Espace intérieur pour le confort de la frappe */
+  margin-top: 10px; /* Espace avant le textarea */
+  border: 1px solid #ddd; /* Style de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  font-family: Arial, sans-serif; /* Police cohérente avec le reste */
+}
+
+textarea:focus {
+  outline: none; /* Supprime la bordure de mise au point par défaut */
+  border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+.response-area {
+    width: 100%; /* Prend la largeur totale du parent */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+    padding: 10px; /* Espace intérieur pour le confort */
+    margin-top: 10px; /* Espacement au-dessus du textarea */
+    border: 1px solid #ddd; /* Style de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-family: Arial, sans-serif; /* Police cohérente */
+}
+
+.response-area:focus {
+    outline: none; /* Supprime la bordure de mise au point par défaut */
+    border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+
+
+#saveButton {
+    background-color: #085e79; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Padding autour du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition douce pour le survol */
+}
+
+#saveButton:hover {
+    background-color: #0a7ba8; /* Couleur de fond plus claire au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+
+.input-group {
+    display: flex; /* Utilise Flexbox pour la disposition */
+    justify-content: space-between; /* Répartit l'espace uniformément */
+    align-items: center; /* Alignement vertical des éléments */
+    margin-bottom: 15px; /* Espacement en dessous du groupe */
+}
+
+.input-field {
+    flex: 1; /* Chaque champ prend une part égale de l'espace */
+    margin-right: 10px; /* Espacement entre les champs */
+}
+
+.input-field:last-child {
+    margin-right: 0; /* Pas de marge à droite pour le dernier élément */
+}
+
+input[type="text"] {
+    width: 100%; /* Utilise la largeur totale de son conteneur */
+    padding: 8px; /* Padding confortable */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 4px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+input[type="text"]:focus {
+    border-color: #085e79; /* Couleur de la bordure lors de la sélection */
+    outline: none; /* Supprime la mise en valeur par défaut lors de la sélection */
+}
+
+label {
+    display: block; /* S'assure que le label est au-dessus de l'input */
+    margin-bottom: 5px; /* Espacement avant le champ de saisie */
+    color: #085e79; /* Couleur de texte #085e79 */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+
+/* EXERCICE PILIER */
+.exercise-container {
+  border: 2px solid #085e79;
+  padding: 20px;
+  text-align: center;
+}
+
+.exercise-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.exercise-button {
+  background-color: #085e79;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animation de transition de couleur de fond */
+}
+
+.exercise-button:hover {
+  background-color: #064d63; /* Changement de couleur de fond au survol */
+}
+
+.exercise-button:focus {
+  outline: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .response-area {
+        border: 1px solid #ddd; /* Style de bordure */
+        /* Réduisez la ta
+        ille de la police ou ajustez le padding si nécessaire */
+    }
+}
+
+
+/* Cacher les liens de navigation sur les petits écrans */
+@media screen and (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+        background-color: #085e79;
+        padding-top: 20px;
+    }
+
+    .navbar-links.nav-active {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .checklist li {
+        padding: 10px;
+        margin:10px 0;
+}
+.checklist li ul {
+    margin-left: 20px;
+}
+
+.checklist li ul li {
+    padding: 10px;
+    margin: 10px 0;
+}
+}
+
+</style>
+
+
+</head>
+<body>
+<!-- Menu Navbar avec bouton Burger -->
+    <div class="navbar">
+        <button class="burger">
+            ☰
+        </button>
+        <div class="navbar-links">
+            <a href="index.html">Processus</a>
+            <a href="seance1.html">Séance 1</a>
+            <a href="seance2.html">Séance 2</a>
+            <a href="seance3.html">Séance 3</a>
+            <a href="seance4.html">Séance 4</a>
+            <a href="seance5.html">Séance 5</a>
+            <a href="seance6.html">Séance 6</a>
+            <a href="seance7.html">Séance 7</a>
+            <a href="seance8.html">Séance 8</a>
+            <a href="seance9.html">Séance 9</a>
+            <div class="dropdown">
+                <button class="dropbtn">Protocole</button>
+                <div class="dropdown-content">
+                    <a href="./PROTOCOLES/Les 7 piliers de vie.pdf">Les 7 piliers de vie</a></a>
+                    <a href="#protocole2">Protocole 2</a>
+                </div>
+            </div>
+        </div>
+  </div>
+
+      
+    
+  <div class="container">
+      <h1>SEANCE 8 – Drivers et états du moi</h1> 
+
+      <p>On aura fait faire 2 questionnaires au coaché plus tôt dans l’accompagnement : test egogramme questions (états du moi) et test messages contraignants (drivers). On transmet au coaché les tests sans les résultats (voir tests ci-joints).</p>
+
+
+
+      <div class="container">
+        <div class="drivers">
+            <h2>Les drivers</h2>
+            <p>
+                Ils agissent comme des injonctions, c’est-à-dire qu’on les prend pour des conditions sine qua non pour être reconnus, aimés, et acceptés par les autres. Ils nous conditionnent de manière forte.
+                Ils expriment des valeurs familiales, sociales, les attentes des autres envers nous. Nous les avons tous avec 2 ou 3 qui nous influencent de manière plus forte.
+            </p>
+            <p>
+                L’objectif est d’adoucir les inconvénients du driver et d’en prendre les messages positifs, de prendre conscience des drivers qui nous influencent le plus et de voir dans quelles situations ils nous sont utiles et nous portent et dans quelles situations ils sont négatifs et nous limitent. Pour cela, on va mettre en place des messages permissifs qui provoquent un soulagement chez le coaché. C’est le coaché qui va formuler son message permissif pour qu’il s’intègre à son système.
+            </p>    
+            <p>
+                Ils sont au nombre de 5, ce sont : sois parfait, sois fort, fais un effort, fais plaisir, dépêche-toi.
+            </p>
+              
+            <h2>Sois parfait :</h2>
+            <p>
+                Croyance fausse et nuisible : on peut faire plaisir à tout le monde
+            </p>
+            <p>
+                Avantages : de très bonne compagnie, flexible, conciliant, altruiste, empathique, aimable, anticipe besoins et répond favorablement, dévoué, évite les conflits, prend des décisions collégiales
+            </p>    
+            <p>
+                Inconvénients : les besoins et les envies des autres passent avant les siennes, peur d’être rejeté, tendance à la dépendance affective, 
+                insatisfaction, ingratitude, frustration, difficulté à exprimer les sentiments, ont besoin d’être approuvés, ne se fixe pas de minimum donc ne vit pas ce qu’il veut, posture du sauveur.
+            </p>
+            <p>
+                Exemple de messages permissifs : je ne suis pas responsable des autres, j’ai le droit à mes propres sentiments, j’ai le droit de me donner à moi-même considération et respect.
+            </p>
+        
+            <h2>Dépêche-toi :</h2>
+            <p>
+                Croyance fausse et nuisible : on ne fait bien les choses que vite. Le temps est trop précieux pour être gâché.
+            </p>
+            <p>
+                Avantages : performant dans l’urgence, fait avancer les projets, mise en mouvement rapide, autonome
+            </p>    
+            <p>
+                Inconvénients : laisse les autres derrière soi, peut être agité, s’éparpiller, impatient, se met la pression, s’ennuie facilement, préfère la rapidité à la quantité, a tendance à presser les autres, tendance persécuteur, peut oublier des choses, stressé / stressant, méprise la lenteur, prendre son temps est difficile, procrastine.
+            </p>
+            <p>
+                Exemple de messages permissifs : tu peux prendre ton temps, tu peux profiter du moment présent, tu peux réaliser ce que tu veux faire.
+            </p>
+        
+            <h2>Fais un effort :</h2>
+            <p>
+                Croyance fausse et nuisible : quelqu’un qui en bave finit toujours par réussir. Si c’est facile, il n’y a aucun mérite. Attention si c’est un manager.
+            </p>
+            <p>
+                Avantages : travailleur acharné, s’implique pleinement, ok avec les obstacles, énergie énorme, se dépasser, aller au charbon, patient, persévérant, aide les autres, volonté de donner le meilleur de soi
+            </p>    
+            <p>
+                Inconvénients : ne se facilite jamais les choses, tout est difficile et les autres doivent peiner avec lui, important de se montrer dans l’acharnement, découragé, entêté, 
+                a du mal à finir, orienté plus vers l’effort que vers le résultat, difficile d’être dans le plaisir, compliqué quand c’est facile, craint la critique, recommence, le mérite dépend du mal que l’on se donne.
+            </p>
+            <p>
+                Exemple de messages permissifs : j’ai le droit de m’accomplir simplement, j’ai le droit de bien faire, de gagner, j’ai le droit de m’aimer comme je suis, je peux obtenir un résultat facilement.
+            </p>
+
+ 
+            <h2>Sois fort :</h2>
+            <p>
+                Croyance fausse et nuisible : c’est important de faire croire que l’on est fort, s’écouter est un signe de faiblesse.
+            </p>
+            <p>
+                Avantages : courageux, résiste à la pression, bon en situation de crise, orienté résultats, as de la résolution de problèmes, tenace autonome, indépendant
+            </p>    
+            <p>
+                Inconvénients : pas dans les émotions (=faiblesse), isolement émotionnel et relationnel, mépris de la faiblesse, on n’a pas besoin des autres, il faut se méfier des autres, 
+                ne s’écoute pas, manque de confiance en soi, peut se mettre en danger, tendance sauveur, il faut tenir coûte que coûte.
+            </p>
+            <p>
+                Exemple de messages permissifs : j’ai le droit d’être proche de mes émotions et de les exprimer, j’ai le droit de ne pas être fort, j’ai le droit d’être humain, malade, de souffrir, de me reposer.
+            </p>
+   
+        
+            <h2>Coaching des drivers :</h2>
+            <p>
+                On va expliquer au coaché ce que sont les drivers et comment ils nous influencent, puis travailler sur les 2 ou 3 drivers qui arrivent en tête du test.
+            </p>
+            <p>
+                Pour chaque driver, on va expliquer au coaché la croyance fausse et nuisible, les avantages, les inconvénients. Lui demander de nous citer des situations concrètes où son driver s’est mis en marche, lui demander si son driver a été utile dans cette situation ou encore « que se passerait-il si tu ne faisais pas cela ? »
+            </p>
+            <p>
+                Ensuite, on va accompagner le coaché à trouver son ou ses messages permissifs : « qu’est-ce que tu peux te dire à la place dans cette situation ? ». Si on a bien travaillé les croyances dans une séance précédente, le message permissif apparaît naturellement.
+            </p>
+            <p>
+                On peut réaliser un ancrage kinesthésique du message permissif en lui faisant vivre le ressenti correspondant. Lui proposer de fermer les yeux et :
+            </p>
+            <ul>
+                <li>Imagine, là, tu te dis que tu as le droit de te reposer, qu’est-ce que tu ressens ?</li>
+                <li>xxx</li>
+                <li>Je te propose de ressentir plus fort encore cela.</li>
+            </ul>
+            <p>
+                Quand le ressenti arrive au maximum (on le voit sur le visage du coaché), lui faire poser l’ancrage (creux de la main par exemple).
+            </p>
+        </div>
+
+        <div class="etats-du-moi">
+            <h2>Les états du moi :</h2>
+            <p>
+                Nous abritons simultanément 3 personnages en nous : un parent, un enfant et un adulte. A chaque état du moi correspond une façon de se mouvoir, de penser de faire, une intonation, un vocabulaire, des comportements (système cohérent de pensées, de sentiments, de comportements qui y correspondent).
+            </p>
+            <p>
+                D’après Eric Berne, créateur de l’Analyse Transactionnelle (fin des années 50 – médecin psychiatre), chaque état du moi possède une fonction vitale pour l’être humain. Selon les situations et les personnes rencontrées, nous activons tel ou tel état. L’individu ne dépasse pas les différents états mais les intègre, à l’âge adulte, coexistence de tous ces états. Les 3 états se développent chronologiquement puis coexistent en nous. Peuvent se manifester à tout moment.
+            </p>
+            <h3>L’enfant adapté soumis :</h3>
+            <p>
+                Face aux réactions de ses parents, l’enfant apprend à se contrôler, il s’adapte, les réactions ne sont plus naturelles mais réfléchies. Il éprouve des sentiments nouveaux : culpabilité, honte, jalousie, malaise, frustration, fierté, qui compliquent ses réactions. A l’âge adulte, se forcera, réprimera des réactions, sera à être poli et souriant par crainte des conséquences.
+            </p>
+            <h3>L’enfant libre :</h3>
+            <p>
+                Naturel, ressenti, spontané. C’est le premier état, notre côté le plus authentique. Exprime de façon libre et brute sans réserve son ressenti, ses désirs, besoins, émotions, peurs, craintes, plaisirs, colères, souffrances. On est dans le monde de l’émotion. Chez l’adulte, repérable lorsque la personne exprime sans détour ses émotions.
+            </p>
+            <h3>L’enfant adapté rebelle :</h3>
+            <p>
+                Forme d’adaptation aux exigences d’une autorité. Opposition ou révolte, exprime son désaccord. Se révolte contre l’autorité simplement par ce que c’est l’autorité.
+            </p>
+            <h3>Le parent critique / normatif :</h3>
+            <p>
+                Fonction de protection et de transmission de valeurs. Juge, pose des règles, le cadre, transmet des normes. Posture rigide et fermée. Syndrome du persécuteur.
+            </p>
+            <h3>Le parent nourricier / permissif :</h3>
+            <p>
+                Fonction de permettre et encourager. Posture ouverte, d’accueil. Syndrome du sauveur.
+            </p>
+            <h3>L’adulte :</h3>
+            <p>
+                Etat qui se construit le plus tardivement. observe, comprend, agit, décide, analyse. Apporte logique, faits, avantages, inconvénients, informations. Régule les activités du parent et de l’enfant. Rôle de médiateur.
+            </p>
+            <p>
+                A partir des résultats du test egogramme, on va repérer quel est le niveau du coaché sur chacun des états du moi. Si les résultats (sauf adulte) sont dans la moyenne : rien à faire. L’objectif est d’avoir un adulte le plus élevé possible.
+            </p>
+            <p>
+                Le coaching des états du moi consiste en :
+            </p>
+            <ul>
+                <li>faire repérer au coaché des situations où il active tel ou tel état</li>
+                <li>lui donner le contenu ci-dessus</li>
+            </ul>
+        </div>
+        
+    </div>
+        <h3>TESTS :</h3>
+
+        <a href="./DOCS/Test Egogramme questions.xlsx" class="exercise-button">Egogramme</a>
+        <a href="./DOCS/Exercice AT Test Messages contraignants.pdf" class="exercise-button">Messages contraignants</a>
+        <br>
+
+      <ul class="checklist">
+                <!-- Nom et Prénom -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="firstName">Prénom:</label>
+                        <input type="text" id="firstName" placeholder="Entrez votre prénom">
+                    </div>
+                    <div class="input-field">
+                        <label for="lastName">Nom:</label>
+                        <input type="text" id="lastName" placeholder="Entrez votre nom">
+                    </div>
+                </div>
+
+
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> 
+            <ul class="checklist">
+                <li><input type="checkbox" onclick="toggleCheckbox(this)"> 
+
+                        <!-- Questions -->
+                    <ul class="checklist">
+                        
+                
+                    </ul>
+                </li>
+
+        </li>
+      </ul>
+     
+      <br><br>
+      <div class="exercise-container">
+        <p class="exercise-title">Exercice (s)</p>
+        <p>À la fin de chaque séance, le coach propose à son client l'exercice des '7 piliers de vie'. Pendant cet exercice, on explique au client de quoi il s’agit et on lui demande de réfléchir à l'un des sept piliers entre cette séance et la suivante, avec un feedback sur la thématique au début de la séance suivante.</p>
+
+        <p>Les 7 piliers sont :</p>
+        <ul>
+          <li>Les valeurs : à la fin de la séance 2</li>
+          <li>Les besoins : à la fin de la séance 3</li>
+          <li>L'intégrité : à la fin de la séance 4</li>
+          <li>Le positivisme : à la fin de la séance 5</li>
+          <li>Poser ses limites : à la fin de la séance 6</li>
+          <li>Le réseau relationnel : à la fin de la séance 7</li>
+          <li>Rendre le présent parfait : à la fin de la séance 8</li>
+        </ul>
+        <p>Cela permet d'évaluer son état actuel, d'explorer des thèmes importants, d'identifier les obstacles, et de se préparer pour la séance suivante.</p>
+        
+        <a href="./PROTOCOLES/Les 7 piliers de vie.pdf" class="exercise-button"> Les 7 piliers de vie</a>
+      </div>
+
+</div>
+          
+    <button id="scrollTopBtn"><b>Remonter</b></button>
+
+    <style>
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        padding: 10px 20px;
+        background-color: #085e79;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Cachez le bouton par défaut */
+        }
+    </style>
+    
+    <script>
+        function toggleCheckbox(checkbox) {
+            checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.navbar-links');
+    
+            burger.addEventListener('click', function () {
+                navLinks.classList.toggle('nav-active');
+            });
+        });
+    
+    
+    
+    
+        document.getElementById('saveButton').addEventListener('click', function() {
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
+        let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
+        let allResponsesFilled = true;
+    
+        checklistItems.forEach((textarea, index) => {
+            const question = textarea.closest('li').innerText.split('\n')[0].trim();
+            const answer = textarea.value.trim();
+            if (!answer) {
+                allResponsesFilled = false;
+            }
+            responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
+        });
+    
+        if (!firstName || !lastName) {
+            alert("Veuillez entrer votre nom et votre prénom.");
+            return;
+        }
+    
+        if (!allResponsesFilled) {
+            alert("Veuillez répondre à toutes les questions avant de soumettre.");
+            return;
+        }
+    
+        const blob = new Blob([responses], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${firstName}_${lastName}_reponses.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        });
+    
+    
+        // Fonction pour remonter en haut de la page
+        function scrollToTop() {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Effet de défilement doux
+        });
+        }
+    
+        // Affiche le bouton quand l'utilisateur descend de 100px
+        window.onscroll = function() {
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+        } else {
+        scrollTopBtn.style.display = "none";
+        }
+        };
+    
+        // Ajoute l'événement de clic au bouton
+        document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
+    </script>
+    
+    
+    </body>
+    </html>
+    

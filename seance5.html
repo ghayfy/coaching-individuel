@@ -433,7 +433,7 @@ label {
       <p>Protocole créé par Robert DILTS – PNL – Etats-Unis</p>
 
       <div class="container">
-        <h2>Protocole créé par Robert DILTS – PNL – Etats-Unis</h2>
+        <h2>Le protocole des niveaux logiques</h2>
         <p>Le protocole des niveaux logiques est un outil de diagnostic. Il permet plusieurs choses :</p>
         <ul>
             <li>De vérifier que le coaché est aligné à son objectif</li>
@@ -466,7 +466,7 @@ label {
         </div>
 
         <!-- Questions -->
-                <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>0. Associer le coaché à sa situation désirée avec le VAKOG et s’il le souhaite il ferme les yeux (c’est mieux s’il ferme les yeux). On peut vérifier qu’il est associé quand il voit la situation à travers ses yeux la situation. S’il se voit dans l’image c’est qu’il n’est pas associé. </b>
+                <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>0. Associer le coaché à sa situation désirée avec le VAKOG (Visuel, Auditif, Kinesthésique, Olfactif et Gustatif) et s’il le souhaite il ferme les yeux (c’est mieux s’il ferme les yeux). On peut vérifier qu’il est associé quand il voit la situation à travers ses yeux la situation. S’il se voit dans l’image c’est qu’il n’est pas associé. </b>
             <ul class="checklist">
                 <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>0.1. Situation désirée</b>
                     <ul class="checklist">
@@ -850,26 +850,40 @@ label {
    </div>
   </ul> 
 
-  
+  <button id="scrollTopBtn"><b>Remonter</b></button>
 
-  <script>
+<style>
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #085e79;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Cachez le bouton par défaut */
+    }
+</style>
+
+<script>
     function toggleCheckbox(checkbox) {
         checkbox.parentNode.classList.toggle('checked', checkbox.checked);
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      const burger = document.querySelector('.burger');
-      const navLinks = document.querySelector('.navbar-links');
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.navbar-links');
 
-      burger.addEventListener('click', function () {
-          navLinks.classList.toggle('nav-active');
-      });
-  });
-
-
+        burger.addEventListener('click', function () {
+            navLinks.classList.toggle('nav-active');
+        });
+    });
 
 
-document.getElementById('saveButton').addEventListener('click', function() {
+
+
+    document.getElementById('saveButton').addEventListener('click', function() {
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
     const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
@@ -902,9 +916,31 @@ document.getElementById('saveButton').addEventListener('click', function() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-});
+    });
+
+
+    // Fonction pour remonter en haut de la page
+    function scrollToTop() {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Effet de défilement doux
+    });
+    }
+
+    // Affiche le bouton quand l'utilisateur descend de 100px
+    window.onscroll = function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.display = "block";
+    } else {
+    scrollTopBtn.style.display = "none";
+    }
+    };
+
+    // Ajoute l'événement de clic au bouton
+    document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
 </script>
 
-  
-  </body>
-  </html>
+
+</body>
+</html>

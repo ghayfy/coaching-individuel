@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUIDE DE COACHING Individuel</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 0;
+  color: #085e79; /* Couleur du texte */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #126781; /* Couleur du texte */
+  text-align: center;
+  font-size: 32px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #126781; /* Couleur du texte */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.checklist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  transition: all 0.5s ease;
+}
+
+.checklist li.checked {
+  background-color: #d4edda; /* Couleur de fond quand cochée (vert pâle) */
+  border-color: #c3e6cb; /* Couleur de la bordure quand cochée (vert) */
+}
+
+.checklist li:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #085e79; /* Couleur de fond du bouton (bleu similaire) */
+    color: #fff; /* Couleur du texte du bouton */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #085e79; /* Couleur de fond du bouton au survol */
+}
+
+ /* Style pour le lien */
+ .pdf-link {
+    color: #085e79; /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Met en gras le texte du lien */
+  }
+
+  /* Style pour l'indication */
+  .click-indicator {
+    font-size: 80%; /* Réduit la taille de la police */
+    margin-left: 5px; /* Ajoute un espacement à gauche */
+    color: #085e79; /* Couleur de l'indication */
+  }
+
+  /* Style pour le lien au survol de la souris */
+  .pdf-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+  }
+
+  
+   /* Style pour le Menu */
+.navbar {
+    background-color: #085e79; /* Couleur de fond */
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /* Couleur du texte */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #ffffff; /* Séparateur blanc entre les onglets */
+}
+
+/* Retirer le séparateur pour le dernier élément de la navbar */
+.navbar a:last-child, .navbar .dropdown:last-child .dropbtn {
+    border-right: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style pour le menu déroulant */
+.dropdown {
+    float: left;
+    overflow: hidden;
+    border-right: 1px solid #ffffff; /* Séparateur pour le menu déroulant */
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Améliorations du style pour le bouton Burger */
+.burger {
+    display: none;
+    position: relative;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+.burger:before, .burger:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.burger:before {
+    transform: translate(-50%, -10px);
+}
+
+.burger:after {
+    transform: translate(-50%, 8px);
+}
+
+/* Style pour les liens de navigation */
+.navbar-links {
+    transition: all 0.3s ease;
+}
+
+
+textarea {
+  width: 100%; /* Utilisez toute la largeur disponible */
+  padding: 10px; /* Espace intérieur pour le confort de la frappe */
+  margin-top: 10px; /* Espace avant le textarea */
+  border: 1px solid #ddd; /* Style de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  font-family: Arial, sans-serif; /* Police cohérente avec le reste */
+}
+
+textarea:focus {
+  outline: none; /* Supprime la bordure de mise au point par défaut */
+  border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+.response-area {
+    width: 100%; /* Prend la largeur totale du parent */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+    padding: 10px; /* Espace intérieur pour le confort */
+    margin-top: 10px; /* Espacement au-dessus du textarea */
+    border: 1px solid #ddd; /* Style de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-family: Arial, sans-serif; /* Police cohérente */
+}
+
+.response-area:focus {
+    outline: none; /* Supprime la bordure de mise au point par défaut */
+    border-color: #085e79; /* Couleur de la bordure lors de la mise au point */
+}
+
+
+
+#saveButton {
+    background-color: #085e79; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Padding autour du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition douce pour le survol */
+}
+
+#saveButton:hover {
+    background-color: #0a7ba8; /* Couleur de fond plus claire au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+
+.input-group {
+    display: flex; /* Utilise Flexbox pour la disposition */
+    justify-content: space-between; /* Répartit l'espace uniformément */
+    align-items: center; /* Alignement vertical des éléments */
+    margin-bottom: 15px; /* Espacement en dessous du groupe */
+}
+
+.input-field {
+    flex: 1; /* Chaque champ prend une part égale de l'espace */
+    margin-right: 10px; /* Espacement entre les champs */
+}
+
+.input-field:last-child {
+    margin-right: 0; /* Pas de marge à droite pour le dernier élément */
+}
+
+input[type="text"] {
+    width: 100%; /* Utilise la largeur totale de son conteneur */
+    padding: 8px; /* Padding confortable */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 4px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+input[type="text"]:focus {
+    border-color: #085e79; /* Couleur de la bordure lors de la sélection */
+    outline: none; /* Supprime la mise en valeur par défaut lors de la sélection */
+}
+
+label {
+    display: block; /* S'assure que le label est au-dessus de l'input */
+    margin-bottom: 5px; /* Espacement avant le champ de saisie */
+    color: #085e79; /* Couleur de texte #085e79 */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+
+/* EXERCICE PILIER */
+.exercise-container {
+  border: 2px solid #085e79;
+  padding: 20px;
+  text-align: center;
+}
+
+.exercise-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.exercise-button {
+  background-color: #085e79;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animation de transition de couleur de fond */
+}
+
+.exercise-button:hover {
+  background-color: #064d63; /* Changement de couleur de fond au survol */
+}
+
+.exercise-button:focus {
+  outline: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .response-area {
+        border: 1px solid #ddd; /* Style de bordure */
+        /* Réduisez la ta
+        ille de la police ou ajustez le padding si nécessaire */
+    }
+}
+
+
+/* Cacher les liens de navigation sur les petits écrans */
+@media screen and (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+        background-color: #085e79;
+        padding-top: 20px;
+    }
+
+    .navbar-links.nav-active {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .checklist li {
+        padding: 10px;
+        margin:10px 0;
+}
+.checklist li ul {
+    margin-left: 20px;
+}
+
+.checklist li ul li {
+    padding: 10px;
+    margin: 10px 0;
+}
+}
+
+</style>
+
+
+</head>
+<body>
+<!-- Menu Navbar avec bouton Burger -->
+<div class="navbar">
+    <button class="burger">
+        ☰
+    </button>
+      <div class="navbar-links">
+          <a href="index.html">Processus</a>
+          <a href="seance1.html">Séance 1</a>
+          <a href="seance2.html">Séance 2</a>
+          <a href="seance3.html">Séance 3</a>
+          <a href="seance4.html">Séance 4</a>
+          <a href="seance5.html">Séance 5</a>
+          <a href="seance6.html">Séance 6</a>
+          <a href="seance7.html">Séance 7</a>
+          <a href="seance8.html">Séance 8</a>
+          <a href="seance9.html">Séance 9</a>
+          <div class="dropdown">
+              <button class="dropbtn">Protocole</button>
+              <div class="dropdown-content">
+                  <a href="./PROTOCOLES/Les 7 piliers de vie.pdf">Les 7 piliers de vie</a></a>
+                  <a href="#protocole2">Protocole 2</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+      
+    
+  <div class="container">
+      <h1>SEANCE 9 – ESTIME DE SOI</h1> 
+
+      <p>L’estime de soi, c’est l’évaluation – donc un jugement de valeur à propos de soi, entre le je perçu et le je idéal.</p>
+
+
+
+      <div class="container">
+        <h2>Le Protocole SCORE</h2>
+        <p>
+            Cette évaluation est fondée sur la conscience que l’on a de sa propre valeur et de son importance inaliénable en tant qu’être humain. 
+            Elle est fondée également sur le sentiment de sécurité que donne la certitude de pouvoir utiliser ses capacités, 
+            son libre-arbitre et ses facultés d’apprentissage pour faire face de manière efficace et responsable aux défis et évènements de la vie. 
+            Les personnes qui ont de l’estime de soi pensent qu’elles ont de la valeur, qu’elles sont dignes d’être aimées et heureuses, qu’elles sont compétentes, 
+            elles s’acceptent telles qu’elles sont, elles se donnent le droit à l’erreur, savent qu’elles peuvent apprendre, sont responsables de ce qui leur arrive, 
+            sont enclines à agir, confiantes, gaies, créatives, ayant le sens de l’humour, des attentes positives, se sentent égales aux autres, ont des rapports agréables et constructifs, 
+            souvent calmes, coopératives, sociables, bienveillantes, sentent qu’elles n’ont rien à prouver, ne craignent pas le jugement des autres, sont sans préoccupation parasitaire, savent écouter, 
+            se respectent et s’affirment. La prise de risque est plus facile.
+        </p>
+        <p>
+            La compétition, la remise en question, l’échec sont de bons tests pour la stabilité de l’estime de soi. Au plus on a de réussites, au plus l’estime de soi se développe.
+        </p>
+    
+        <p>
+            Les personnes qui manquent d’estime de soi souffrent de difficultés d’adaptation. Comme elles ne savent pas si elles peuvent compter sur elles-mêmes, les changements leur font peur, 
+            elles se montrent souvent contrôlantes et rigides, elles ont plus de difficultés à admettre leurs erreurs, elles se montrent facilement défensives. 
+            L’autre est facilement perçu comme accusateur voire menaçant ou encore source d’humiliation et de rejet. Elles souhaitent avoir raison ce qui suppose que l’autre ait tort. 
+            Elles ont des difficultés à communiquer honnêtement et ouvertement, elles doutent de l’amour qu’on leur porte, vivent dans une insécurité. La dépression est une maladie de l’estime de soi.
+        </p>
+    
+        <p>Il est possible d’avoir une bonne estime de soi dans un domaine et une moins bonne dans un autre. L’estime de soi se modifie au cours du temps et nous pouvons la faire évoluer positivement. 
+            Elles se construit tout au long de la vie et notamment au contact des parents en fonction de : sécurisation, valorisation (attention à la surprotection et la survalorisation), sérénité ou anxiété des parents
+        </p>
+        <h2>Les fondements de l’estime de soi :</h2>
+        <ul>
+            <li>S’accepter à tous les niveaux</li>
+            <li>Acquérir les capacités nécessaires pour compter sur soi et relever les défis de la vie</li>
+            <li>Vivre en accord avec ses motivations profondes</li>
+        </ul>
+        <p>
+            L’estime de soi dépend de la connaissance de soi et du niveau et de la nature du moi idéal.
+        </p>
+        <ul>
+            <li>Si l’on se perçoit proche des critères du moi idéal : estime de soi haute</li>
+            <li>Si l’on se perçoit éloigné des critères du moi idéal : estime de soi faible</li>
+        </ul>
+        <p>
+            L’estime de soi s’opère à travers des processus d’identification, d’intériorisation et d’appropriation. L’estime de soi s’appuie sur la construction de cette représentation mentale en privilégiant l’un des 3 pôles de fonctionnement humain :
+        </p>
+        <ul>
+            <li>l’amour de soi (EI) : l’élément le plus important. S’estimer implique de s’évaluer. On s’aime malgré ses défauts, ses limites, ses échecs. Cet amour ne dépend pas de nos performances. Se respecter, ses besoins, ses aspirations.</li>
+            <li>l’image de soi (PI) : le regard que l’on porte sur soi, ses qualités et défauts. Croire en ses capacités pour se projeter dans l’avenir.</li>
+            <li>la confiance en soi (CE) : penser que l’on est capable d’agir de manière appropriée dans les situations importantes. Agir sans crainte du jugement de l’autre et de l’échec.</li>
+        </ul>
+        <p>
+            Solidité de l’estime de soi :
+        </p>
+        <ul>
+            <li>haute et stable : évènements ordinaires auront peu d’influence. Si la personne est contredite, elle cherchera à convaincre plutôt qu’à déstabiliser</li>
+            <li>haute et instable : peut subir des à-coups dans les contextes déstabilisants ou compétitifs. Réagit avec vigueur à l’échec et à la critique, perçue comme une menace. Pratique son autopromotion en mettant en valeur qualités et succès.</li>
+            <li>Basse et instable : sensible et réactif aux évènements extérieurs positifs et négatifs. Veulent améliorer leur condition et état d’âme. Très sensibles, triomphe modeste et souffrance discrète.</li>
+            <li>Basse et stable : consacre peu d’efforts pour se valoriser, accepte et subit.</li>
+        </ul>
+    
+        <p>
+            Une personne qui est haute et stable : on n’a pas besoin de travailler sur l’estime de soi. Une personne haute et stable ne met pas de masque.
+             Une personne haute aura tendance à poser des actions qui impliqueront des succès et maintiendront le niveau d’estime de soi. 
+             Une personne basse posera peu d’actions et aura peu d’opportunités d’augmenter son niveau.
+        </p>
+    
+
+      <ul class="checklist">
+                <!-- Nom et Prénom -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="firstName">Prénom:</label>
+                        <input type="text" id="firstName" placeholder="Entrez votre prénom">
+                    </div>
+                    <div class="input-field">
+                        <label for="lastName">Nom:</label>
+                        <input type="text" id="lastName" placeholder="Entrez votre nom">
+                    </div>
+                </div>
+
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Déroulé des protocoles</b>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> <b>Protocole technique du modèle potentiel</b>
+                    <!-- Étapes -->
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Faire décrire la situation au coaché, situation dans laquelle il considère manquer de confiance en lui ou de respect de lui-même.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> On va lui expliquer que l’estime de soi est composée de l’amour de soi (on s’aime malgré ses défauts, ses limites, ses échecs), de la confiance en soi (on pense que l’on est capable d’agir de manière appropriée dans les situations importantes, d’agir sans crainte du jugement de l’autre et de l’échec) et de l’image de soi (le regard que l’on porte sur soi, ses qualités et défauts, on croit en nos propres capacités pour nous projeter dans l’avenir).
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Lui demander de se donner une note sur 10 sur l’amour de soi, la confiance en soi et l’image de soi dans la situation qu’il a expliquée.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Lui faire valider que l’on va travailler sur la composante où il a la moins bonne note.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Lui demander de penser à une personne qui a selon lui un fort amour de soi ou une forte confiance en lui-même ou une forte image de lui-même.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Lui faire décrire la personne et lui demander « qu’est-ce qui te prouve / à quoi tu vois que cette personne a confiance en elle ? / une belle image d’elle / s’aime ? »
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Le coaché va lister les ingrédients (selon le coaché du coup) de la confiance en soi ou image de soi ou amour de soi. Il faut en récupérer au moins 5. Exemple : sympathique, calme, rayonnant, posture ouverte.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Sur chaque ingrédient, lui demander de se donner une note /10. Si les notes sont supérieures à 7, recommencer au point 6 pour trouver un nouveau groupe d’ingrédients que le coaché va aller chercher plus en profondeur.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Sélectionner les 3 ou 4 ingrédients qui ont les moins bonnes notes.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Sur chaque ingrédient, lui demander : que peux-tu faire pour augmenter ta note de 4 à 5 ? de 5 à 6 ? de 6 à 7 ? jusqu’à 10. S’il cale à 9 et qu’on est parti de 4 par exemple, on peut rester à 9.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Lui demander « par quoi vas-tu commencer ? » - il faut recueillir là une action concrète.
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> Lui demander « quand vas-tu le faire ? »
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+
+<li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>Protocole Matrice de l’identité</b>
+        <p>
+        Créé par Robert Dilts. C’est en quelque sorte le tour du propriétaire. Le protocole permet d’explorer les différentes facettes de l’identité – même celles qui ne sont pas positives, de ce que l’on croit sur soi, pour créer un nouveau soi. 
+        Il permet de réintégrer toutes les facettes, toutes les parties de soi pour construire un nouveau soi et une nouvelle conscience de soi. Le but est d’aligner toutes les composantes de soi. Le résultat sera un je beaucoup plus étayé.
+        </p>
+        <p>
+        NB : on va utiliser un langage symbolique. En effet, le symbole, la métaphore ont un pouvoir particulier et parlent à des parties plus inconscientes.
+        </p>
+        <p>
+        La matrice est la suivante :
+        </p>
+        <table border="1">
+            <tr>
+            <td></td>
+            <td>Ce que je ne suis pas, n’ai jamais été et ne serai jamais</td>
+            <td>Ce que je pourrais devenir</td>
+            <td>Ce que je suis, ai toujours été, serai toujours</td>
+
+            </tr>
+            <tr>
+            <td>Soi idéal</td>
+            <td>Limites et barrières But : dépasser</td>
+            <td>Potentiel But : manifester</td>
+            <td>Nature profonde But : renforcer</td>
+            </tr>
+            <tr>
+            <td>Côté sombre</td>
+            <td>Frontières But : clarifier</td>
+            <td>Faiblesses, défauts But : guérir, apaiser</td>
+            <td>Ombre But : transformer</td>
+            </tr>
+
+        </table>
+
+    <ul class="checklist">
+
+<li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1. On questionne chaque facette indépendamment les unes des autres.</b>
+    <p>
+        On recueille un symbole à chaque étape et on le note ou on le dessine. 
+        <p>1 post-it par symbole.</p>
+    </p>
+    <ul class="checklist">
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1.1. Centre</b>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    On va commencer par explorer ton centre, ta nature profonde. Que veux-tu être que tu es déjà ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Xxx
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est comment xxx ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est quoi xxx ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est [symbole]
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <p>
+                    NB : si le coaché est associé faire un état séparateur (« quel jour on est ? il est quelle heure ?)
+                </p>                
+            </ul>
+        </li>
+    </ul>
+    <ul class="checklist">
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1.2. Potentiel</b>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    On va maintenant explorer ton potentiel. Qu’est-ce que tu voudrais être et que tu crois pouvoir devenir ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Xxx
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est comme quoi ça ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est [symbole]
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <p>
+                    Etat séparateur si coaché associé (« quel jour on est ? il est quelle heure ?)
+                </p>
+            </ul>
+        </li>
+    </ul>
+    <ul class="checklist">
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1.3. Limites</b>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Voyons maintenant tes limites. Que veux-tu être mais crois ne jamais pouvoir être ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Xxx
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est comme quoi ça ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est [symbole]
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <p>
+                    Etat séparateur si coaché associé
+                </p>
+            </ul>
+        </li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1.4. Frontières</b>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Voyons maintenant tes frontières. Que veux-tu ne pas être et crois que tu ne seras jamais ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Xxx
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est comme quoi ça ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est [symbole]
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <p>
+                    Etat séparateur si coaché associé
+                </p>
+            </ul>
+        </li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1.5. Faiblesses</b>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Explorons maintenant tes faiblesses. Que veux-tu ne pas être et crois que tu peux devenir ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Xxx
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est comme quoi ça ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est [symbole]
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <p>
+                    Etat séparateur si coaché associé
+                </p>
+            </ul>
+        </li>
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>1.6. Part d’ombre</b>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Voyons enfin ta part d’ombre. Ce que tu ne veux pas être mais que tu es déjà.
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    Xxx
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est comme quoi ça ?
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                    C’est [symbole]
+                    <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2. On va reprendre chaque composante et on va la modifier.</b>(cf but dans la matrice) 
+        <p>
+            On peut disposer les symboles au sol. Le centre au centre.
+        </p>
+        <p>
+            « je vais maintenant te proposer d’aller visiter ces différentes facettes de ta personnalité qui constituent ton identité. »
+        </p>
+
+        <ul class="checklist">
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2.1. Renforcer son centre</b>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        Le coaché se place sur le symbole qui représente son centre.
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On l’associe à la situation à l’aide du VAKOG : qu’est-ce que tu vois – explorer, qu’est-ce que tu entends – explorer, qu’est-ce que tu sens sur ta peau – explorer, est-ce qu’il y a une odeur – explorer, est-ce qu’il y a un goût – explorer.
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On va chercher ses ressentis : « qu’est-ce que tu ressens ? qu’est-ce qu’il se passe dans ton corps ? ».
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On lui fait faire une visualisation. « est-ce que tu as une image ? », « tu peux me la décrire ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On l’ancre dans son centre avec son symbole et ses ressentis.
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On lui demande « c’était comment ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+            </li>
+        </ul>
+        <ul class="checklist">
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2.2. Manifester son potentiel</b>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        [Normalement il reste associé, s’il se dissocie, le réassocier : « là tu es dans [situation] et [VAKOG] »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Maintenant tu vas prendre tes [ressentis] et ton [symbole] et tu vas aller dans ton potentiel. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Tu vas mélanger ton [symbole du centre] avec ton [symbole du potentiel]. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On va chercher ses ressentis : « qu’est-ce que tu ressens ? qu’est-ce qu’il se passe dans ton corps ? ».
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça élargit et enrichit ton potentiel ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça modifie ton symbole ? » - là normalement, il va créer un nouveau symbole
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « C’était comment ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="checklist">
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2.3. Dépasser ses limites</b>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Maintenant tu vas prendre ton [nouveau symbole du 2.2.] et tu vas aller dans tes limites. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Tu vas mélanger ton [nouveau symbole du 2.2.] avec ton [symbole des limites]. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On va chercher ses ressentis : « qu’est-ce que tu ressens ? qu’est-ce qu’il se passe dans ton corps ? ».
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça modifie tes limites ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça transforme ton symbole ? » - nouveau symbole
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « C’était comment ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="checklist">
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2.4. Clarifier les frontières</b>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Maintenant tu vas prendre ton [nouveau symbole du 2.3.] et tu vas aller dans tes frontières. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Tu vas mélanger ton [nouveau symbole du 2.3.] avec ton [symbole des frontières]. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On va chercher ses ressentis : « qu’est-ce que tu ressens ? qu’est-ce qu’il se passe dans ton corps ? ».
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça met à jour et clarifie tes frontières ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça transforme ton symbole ? » - nouveau symbole
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « C’était comment ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="checklist">
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2.5. Apaiser les faiblesses</b>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Maintenant tu vas prendre ton [nouveau symbole du 2.4.] et tu vas aller dans tes faiblesses. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Tu vas mélanger ton [nouveau symbole du 2.4.] avec ton [symbole des faiblesses]. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On va chercher ses ressentis : « qu’est-ce que tu ressens ? qu’est-ce qu’il se passe dans ton corps ? ».
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça t’aide à transformer / à guérir de tes faiblesses ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça transforme ton symbole ? » - nouveau symbole
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « C’était comment ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="checklist">
+            <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>2.6. Transformer sa part d’ombre</b>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Maintenant tu vas prendre ton [nouveau symbole du 2.5.] et tu vas aller dans ta part d’ombre. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Tu vas mélanger ton [nouveau symbole du 2.5.] avec ton [symbole de ta part d’ombre]. »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        On va chercher ses ressentis : « qu’est-ce que tu ressens ? qu’est-ce qu’il se passe dans ton corps ? ».
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça t’aide à transformer ta part d’ombre ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « Comment ça transforme ton symbole ? » - nouveau symbole
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                    <li>
+                        <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                        « C’était comment ? »
+                        <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <li><input type="checkbox" onclick="toggleCheckbox(this)"> <b>3. Intégration des nouvelles découvertes</b>
+     
+            <ul class="checklist">
+          
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            On retourne dans le centre avec le coaché
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Comment tu te sens ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Xxx
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Que vas-tu faire de ça ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Xxx
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Sais-tu comment le nourrir ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Xxx
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Par quoi vas-tu commencer ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Xxx
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            Quand vas-tu le faire ?
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> 
+                            xxx
+                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+   
+        </li>
+    <button id="saveButton"><b>Enregistrer les réponses</b></button><br><br>
+
+      <div class="exercise-container">
+            <p class="exercise-title">Exercice (s)</p>
+            <p>À la fin de chaque séance, le coach propose à son client l'exercice des '7 piliers de vie'. Pendant cet exercice, on explique au client de quoi il s’agit et on lui demande de réfléchir à l'un des sept piliers entre cette séance et la suivante, avec un feedback sur la thématique au début de la séance suivante.</p>
+
+            <p>Les 7 piliers sont :</p>
+            <ul>
+            <li>Les valeurs : à la fin de la séance 2</li>
+            <li>Les besoins : à la fin de la séance 3</li>
+            <li>L'intégrité : à la fin de la séance 4</li>
+            <li>Le positivisme : à la fin de la séance 5</li>
+            <li>Poser ses limites : à la fin de la séance 6</li>
+            <li>Le réseau relationnel : à la fin de la séance 7</li>
+            <li>Rendre le présent parfait : à la fin de la séance 8</li>
+            </ul>
+            <p>Cela permet d'évaluer son état actuel, d'explorer des thèmes importants, d'identifier les obstacles, et de se préparer pour la séance suivante.</p>
+            
+            <a href="./PROTOCOLES/Les 7 piliers de vie.pdf" class="exercise-button"> Les 7 piliers de vie</a>
+      </div>
+
+    <button id="scrollTopBtn"><b>Remonter</b></button>
+
+    <style>
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        padding: 10px 20px;
+        background-color: #085e79;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Cachez le bouton par défaut */
+        }
+    </style>
+    
+    <script>
+        function toggleCheckbox(checkbox) {
+            checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.navbar-links');
+    
+            burger.addEventListener('click', function () {
+                navLinks.classList.toggle('nav-active');
+            });
+        });
+    
+    
+    
+    
+        document.getElementById('saveButton').addEventListener('click', function() {
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
+        let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
+        let allResponsesFilled = true;
+    
+        checklistItems.forEach((textarea, index) => {
+            const question = textarea.closest('li').innerText.split('\n')[0].trim();
+            const answer = textarea.value.trim();
+            if (!answer) {
+                allResponsesFilled = false;
+            }
+            responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
+        });
+    
+        if (!firstName || !lastName) {
+            alert("Veuillez entrer votre nom et votre prénom.");
+            return;
+        }
+    
+        if (!allResponsesFilled) {
+            alert("Veuillez répondre à toutes les questions avant de soumettre.");
+            return;
+        }
+    
+        const blob = new Blob([responses], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${firstName}_${lastName}_reponses.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        });
+    
+    
+        // Fonction pour remonter en haut de la page
+        function scrollToTop() {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Effet de défilement doux
+        });
+        }
+    
+        // Affiche le bouton quand l'utilisateur descend de 100px
+        window.onscroll = function() {
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+        } else {
+        scrollTopBtn.style.display = "none";
+        }
+        };
+    
+        // Ajoute l'événement de clic au bouton
+        document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
+    </script>
+    
+    
+    </body>
+    </html>
+    

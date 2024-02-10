@@ -325,24 +325,69 @@
         <h2>Bilan de coaching</h2>
     </div>
 
+
+
+
+    <button id="scrollTopBtn"><b>Remonter</b></button>
+
+    <style>
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        padding: 10px 20px;
+        background-color: #085e79;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Cachez le bouton par défaut */
+        }
+    </style>
+    
     <script>
-        // Votre script pour le menu burger
+    
+    function toggleCheckbox(checkbox) {
+            checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.navbar-links');
+    
+            burger.addEventListener('click', function () {
+                navLinks.classList.toggle('nav-active');
+            });
+        });
+    
+    
+    // Fonction pour remonter en haut de la page
+    function scrollToTop() {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Effet de défilement doux
+    });
+    }
+    
+    // Affiche le bouton quand l'utilisateur descend de 100px
+    window.onscroll = function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.display = "block";
+    } else {
+    scrollTopBtn.style.display = "none";
+    }
+    };
+    
+    // Ajoute l'événement de clic au bouton
+    document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
     </script>
+    
+    
+    </body>
+    </html>
+
 </body>
 
 </html>
 
-<script>
-    function toggleCheckbox(checkbox) {
-        checkbox.parentNode.classList.toggle('checked', checkbox.checked);
-    }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.navbar-links');
-
-        burger.addEventListener('click', function () {
-            navLinks.classList.toggle('nav-active');
-        });
-    });
-</script>

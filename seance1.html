@@ -704,57 +704,98 @@ label {
     
   </div>
   
+  <button id="scrollTopBtn"><b>Remonter</b></button>
 
+  <style>
+  #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      padding: 10px 20px;
+      background-color: #085e79;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: none; /* Cachez le bouton par défaut */
+      }
+  </style>
+  
   <script>
-    function toggleCheckbox(checkbox) {
-        checkbox.parentNode.classList.toggle('checked', checkbox.checked);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const burger = document.querySelector('.burger');
-      const navLinks = document.querySelector('.navbar-links');
-
-      burger.addEventListener('click', function () {
-          navLinks.classList.toggle('nav-active');
+      function toggleCheckbox(checkbox) {
+          checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+      }
+  
+      document.addEventListener('DOMContentLoaded', function () {
+          const burger = document.querySelector('.burger');
+          const navLinks = document.querySelector('.navbar-links');
+  
+          burger.addEventListener('click', function () {
+              navLinks.classList.toggle('nav-active');
+          });
       });
-  });
-
-
-document.getElementById('saveButton').addEventListener('click', function() {
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
-    let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
-    let allResponsesFilled = true;
-
-    checklistItems.forEach((textarea, index) => {
-        const question = textarea.closest('li').innerText.split('\n')[0].trim();
-        const answer = textarea.value.trim();
-        if (!answer) {
-            allResponsesFilled = false;
-        }
-        responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
-    });
-
-    if (!firstName || !lastName) {
-        alert("Veuillez entrer votre nom et votre prénom.");
-        return;
-    }
-
-    if (!allResponsesFilled) {
-        alert("Veuillez répondre à toutes les questions avant de soumettre.");
-        return;
-    }
-
-    const blob = new Blob([responses], { type: 'text/plain' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = `${firstName}_${lastName}_reponses.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-});
-</script>
+  
+  
+  
+  
+      document.getElementById('saveButton').addEventListener('click', function() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
+      let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
+      let allResponsesFilled = true;
+  
+      checklistItems.forEach((textarea, index) => {
+          const question = textarea.closest('li').innerText.split('\n')[0].trim();
+          const answer = textarea.value.trim();
+          if (!answer) {
+              allResponsesFilled = false;
+          }
+          responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
+      });
+  
+      if (!firstName || !lastName) {
+          alert("Veuillez entrer votre nom et votre prénom.");
+          return;
+      }
+  
+      if (!allResponsesFilled) {
+          alert("Veuillez répondre à toutes les questions avant de soumettre.");
+          return;
+      }
+  
+      const blob = new Blob([responses], { type: 'text/plain' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${firstName}_${lastName}_reponses.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      });
+  
+  
+      // Fonction pour remonter en haut de la page
+      function scrollToTop() {
+      window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Effet de défilement doux
+      });
+      }
+  
+      // Affiche le bouton quand l'utilisateur descend de 100px
+      window.onscroll = function() {
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollTopBtn.style.display = "block";
+      } else {
+      scrollTopBtn.style.display = "none";
+      }
+      };
+  
+      // Ajoute l'événement de clic au bouton
+      document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
+  </script>
+  
   
   </body>
   </html>
+  
