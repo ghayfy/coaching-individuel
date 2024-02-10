@@ -32,9 +32,13 @@
         }
 
         h2 {
-            color: #126781;
+            color: #fff;
             font-size: 24px;
             margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #126781;
+            cursor: pointer;
         }
 
         .checklist {
@@ -260,137 +264,131 @@
             }
         }
     </style>
-
-
 </head>
+
 <body>
-        <!-- Menu Navbar avec bouton Burger -->
-        <div class="navbar">
+    <!-- Menu Navbar avec bouton Burger -->
+    <div class="navbar">
         <button class="burger">
             ☰
         </button>
-            <div class="navbar-links">
-                <a href="index.html">Processus</a>
-                <a href="seance1.html">Séance 1</a>
-                <a href="seance2.html">Séance 2</a>
-                <a href="seance3.html">Séance 3</a>
-                <a href="seance4.html">Séance 4</a>
-                <a href="seance5.html">Séance 5</a>
-                <a href="mi-parcours.html">Bilan de mi-parcours</a>
-                <a href="seance6.html">Séance 6</a>
-                <a href="seance7.html">Séance 7</a>
-                <a href="seance8.html">Séance 8</a>
-                <a href="seance9.html">Séance 9</a>
-                <a href="bilan-coaching.html">Bilan de coaching</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Protocole</button>
-                    <div class="dropdown-content">
-                        <a href="./PROTOCOLES/Les 7 piliers de vie.pdf">Les 7 piliers de vie</a></a>
-                        <a href="#protocole2">Protocole 2</a>
-                    </div>
+        <div class="navbar-links">
+            <a href="index.html">Processus</a>
+            <a href="seance1.html">Séance 1</a>
+            <a href="seance2.html">Séance 2</a>
+            <a href="seance3.html">Séance 3</a>
+            <a href="seance4.html">Séance 4</a>
+            <a href="seance5.html">Séance 5</a>
+            <a href="mi-parcours.html">Bilan de mi-parcours</a>
+            <a href="seance6.html">Séance 6</a>
+            <a href="seance7.html">Séance 7</a>
+            <a href="seance8.html">Séance 8</a>
+            <a href="seance9.html">Séance 9</a>
+            <a href="bilan-coaching.html">Bilan de coaching</a>
+            <div class="dropdown">
+                <button class="dropbtn">Protocole</button>
+                <div class="dropdown-content">
+                    <a href="./PROTOCOLES/Les 7 piliers de vie.pdf">Les 7 piliers de vie</a>
+                    <a href="#protocole2">Protocole 2</a>
                 </div>
             </div>
         </div>
+    </div>
 
     <div class="container">
-        <h1>Plan du déroulé des séances</h1>
+        <h1 style="color: #126781; text-align: center; font-size: 36px; text-decoration: underline; margin-bottom: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Planification des Séances de Coaching</h1>
 
-        <h2>Séance 1 – RPBD et cadre</h2>
+
+        <h2 onclick="window.location.href='seance1.html'">Séance 1 – RPBD et cadre</h2>
         <p>Exploration de la problématique.</p>
 
-        <h2>Séance 2 – Entretien de motivation et objectif</h2>
+        <h2 onclick="window.location.href='seance2.html'">Séance 2 – Entretien de motivation et objectif</h2>
         <p>Exploration de la problématique, incluant entretien d’objectif ou de résolution de problème.</p>
-        <p>À partir de la deuxième séance, travail sur 1 pilier des « 7 piliers de vie » entre chaque séance. Utilisation d'outils de diagnostic pour faire un état des lieux.</p>
+        <p>À partir de la deuxième séance, travail sur 1 pilier des « 7 piliers de vie » entre chaque séance.
+            Utilisation d'outils de diagnostic pour faire un état des lieux.</p>
 
-        <h2>Séance 3 – SCORE</h2>
-        <p>Outil de diagnostic pour lister les ressources nécessaires à l'atteinte des objectifs et mise en lumière des besoins.</p>
+        <h2 onclick="window.location.href='seance3.html'">Séance 3 – SCORE</h2>
+        <p>Outil de diagnostic pour lister les ressources nécessaires à l'atteinte des objectifs et mise en lumière des
+            besoins.</p>
 
-        <h2>Séance 4 – SMARTER l'objectif</h2>
+        <h2 onclick="window.location.href='seance4.html'">Séance 4 – SMARTER l'objectif</h2>
         <p>Définition des critères d’atteinte et notion d’écologie. Mise en place du contrat.</p>
 
-        <h2>Séance 5 – Niveaux logiques</h2>
-        <p>Identification des blocages, projection dans la réussite de l'objectif et programmation des actions nécessaires.</p>
+        <h2 onclick="window.location.href='seance5.html'">Séance 5 – Niveaux logiques</h2>
+        <p>Identification des blocages, projection dans la réussite de l'objectif et programmation des actions
+            nécessaires.</p>
 
-        <h2>Bilan de mi-parcours</h2>
+        <h2 onclick="window.location.href='mi-parcours.html'">Bilan de mi-parcours</h2>
 
-        <h2>Séance 6 – COACHING DES EMOTIONS</h2>
+        <h2 onclick="window.location.href='seance6.html'">Séance 6 – COACHING DES EMOTIONS</h2>
         <p>Comprendre les émotions et apprendre à écouter leurs messages.</p>
 
-        <h2>Séance 7 – Croyances</h2>
+        <h2 onclick="window.location.href='seance7.html'">Séance 7 – Croyances</h2>
         <p>Travail sur les croyances limitantes et renforcement des croyances ressources.</p>
 
-        <h2>Séance 8 – Drivers et état du moi</h2>
+        <h2 onclick="window.location.href='seance8.html'">Séance 8 – Drivers et état du moi</h2>
         <p>Mise en place de messages permissifs et sensibilisation à l'état du moi.</p>
 
-        <h2>Séance 9 – Estime de soi</h2>
+        <h2 onclick="window.location.href='seance9.html'">Séance 9 – Estime de soi</h2>
         <p>Développement de la confiance en soi, de l’image de soi et de l’amour de soi.</p>
 
         <h2>Bilan de coaching</h2>
     </div>
 
-
-
-
     <button id="scrollTopBtn"><b>Remonter</b></button>
 
     <style>
-    #scrollTopBtn {
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        padding: 10px 20px;
-        background-color: #085e79;
-        color: white;
-        border: none;
-        cursor: pointer;
-        display: none; /* Cachez le bouton par défaut */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            padding: 10px 20px;
+            background-color: #085e79;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+            /* Cachez le bouton par défaut */
         }
     </style>
-    
+
     <script>
-    
-    function toggleCheckbox(checkbox) {
+        function toggleCheckbox(checkbox) {
             checkbox.parentNode.classList.toggle('checked', checkbox.checked);
         }
-    
+
         document.addEventListener('DOMContentLoaded', function () {
             const burger = document.querySelector('.burger');
             const navLinks = document.querySelector('.navbar-links');
-    
+
             burger.addEventListener('click', function () {
                 navLinks.classList.toggle('nav-active');
             });
         });
-    
-    
-    // Fonction pour remonter en haut de la page
-    function scrollToTop() {
-    window.scrollTo({
-    top: 0,
-    behavior: 'smooth' // Effet de défilement doux
-    });
-    }
-    
-    // Affiche le bouton quand l'utilisateur descend de 100px
-    window.onscroll = function() {
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    scrollTopBtn.style.display = "block";
-    } else {
-    scrollTopBtn.style.display = "none";
-    }
-    };
-    
-    // Ajoute l'événement de clic au bouton
-    document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
-    </script>
-    
-    
-    </body>
-    </html>
 
+
+        // Fonction pour remonter en haut de la page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Effet de défilement doux
+            });
+        }
+
+        // Affiche le bouton quand l'utilisateur descend de 100px
+        window.onscroll = function () {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Ajoute l'événement de clic au bouton
+        document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
+    </script>
 </body>
 
 </html>
-
 
