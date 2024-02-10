@@ -574,157 +574,169 @@ label {
                 <li>lui donner le contenu ci-dessus</li>
             </ul>
         </div>
-        
-    </div>
-        <h3>TESTS :
-
-            <a href="./DOCS/Test Egogramme questions.xlsx" class="exercise-button">Egogramme</a>
-            <a href="./DOCS/Exercice AT Test Messages contraignants.pdf" class="exercise-button">Messages contraignants</a>
-        </h3>
-        <br>
-
-      <ul class="checklist">
-                <!-- Nom et Prénom -->
-                <div class="input-group">
-                    <div class="input-field">
-                        <label for="firstName">Prénom:</label>
-                        <input type="text" id="firstName" placeholder="Entrez votre prénom">
-                    </div>
-                    <div class="input-field">
-                        <label for="lastName">Nom:</label>
-                        <input type="text" id="lastName" placeholder="Entrez votre nom">
-                    </div>
+    
+        <ul class="checklist">
+            <!-- Nom et Prénom -->
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="firstName">Prénom:</label>
+                    <input type="text" id="firstName" placeholder="Entrez votre prénom">
                 </div>
+                <div class="input-field">
+                    <label for="lastName">Nom:</label>
+                    <input type="text" id="lastName" placeholder="Entrez votre nom">
+                </div>
+            </div>
 
-
-        <li><input type="checkbox" onclick="toggleCheckbox(this)"> 
             <ul class="checklist">
-                <li><input type="checkbox" onclick="toggleCheckbox(this)"> 
-
-                        <!-- Questions -->
+                <li>
+                    <input type="checkbox" onclick="toggleCheckbox(this)"> <b>à venir</b>
                     <ul class="checklist">
-                        
-                
-                    </ul>
+                        <li>
+                            <input type="checkbox" onclick="toggleCheckbox(this)"> <b>à venir</b>
+                            <ul class="checklist">
+                                <li>
+                                    <input type="checkbox" onclick="toggleCheckbox(this)"> <b>à venir</b>
+                                    <ul class="checklist">
+                                        <li>
+                                            <input type="checkbox" onclick="toggleCheckbox(this)"> à venir
+                                            <textarea class="response-area" maxlength="1500" placeholder="Votre réponse ici..."></textarea>
+                                        </li>
+                                    
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <script>
+                                function toggleCheckbox(checkbox) {
+                                    checkbox.checked = !checkbox.checked;
+                                }
+                            </script>
+                            
+                            <button id="saveButton"><b>Enregistrer les réponses</b></button> 
+                            <br><br>
+                            <div class="exercise-container">
+                              <p class="exercise-title">Exercice (s)</p>
+                              <p>À la fin de chaque séance, le coach propose à son client l'exercice des '7 piliers de vie'. Pendant cet exercice, on explique au client de quoi il s’agit et on lui demande de réfléchir à l'un des sept piliers entre cette séance et la suivante, avec un feedback sur la thématique au début de la séance suivante.</p>
+                      
+                              <p>Les 7 piliers sont :</p>
+                              <ul>
+                                <li>Les valeurs : à la fin de la séance 2</li>
+                                <li>Les besoins : à la fin de la séance 3</li>
+                                <li>L'intégrité : à la fin de la séance 4</li>
+                                <li>Le positivisme : à la fin de la séance 5</li>
+                                <li>Poser ses limites : à la fin de la séance 6</li>
+                                <li>Le réseau relationnel : à la fin de la séance 7</li>
+                                <li>Rendre le présent parfait : à la fin de la séance 8</li>
+                              </ul>
+                              <p>Cela permet d'évaluer son état actuel, d'explorer des thèmes importants, d'identifier les obstacles, et de se préparer pour la séance suivante.</p>
+                              
+                              <a href="./PROTOCOLES/Les 7 piliers de vie.pdf" class="exercise-button"> Les 7 piliers de vie</a>
+                            </div>
+                      
+                          </div>
+                                
+                          <button id="scrollTopBtn"><b>Remonter</b></button>
                 </li>
+                
+            </ul>
 
-        </li>
-      </ul>
-     
-      <br><br>
-      <div class="exercise-container">
-        <p class="exercise-title">Exercice (s)</p>
-        <p>À la fin de chaque séance, le coach propose à son client l'exercice des '7 piliers de vie'. Pendant cet exercice, on explique au client de quoi il s’agit et on lui demande de réfléchir à l'un des sept piliers entre cette séance et la suivante, avec un feedback sur la thématique au début de la séance suivante.</p>
+            
+            
 
-        <p>Les 7 piliers sont :</p>
-        <ul>
-          <li>Les valeurs : à la fin de la séance 2</li>
-          <li>Les besoins : à la fin de la séance 3</li>
-          <li>L'intégrité : à la fin de la séance 4</li>
-          <li>Le positivisme : à la fin de la séance 5</li>
-          <li>Poser ses limites : à la fin de la séance 6</li>
-          <li>Le réseau relationnel : à la fin de la séance 7</li>
-          <li>Rendre le présent parfait : à la fin de la séance 8</li>
-        </ul>
-        <p>Cela permet d'évaluer son état actuel, d'explorer des thèmes importants, d'identifier les obstacles, et de se préparer pour la séance suivante.</p>
-        
-        <a href="./PROTOCOLES/Les 7 piliers de vie.pdf" class="exercise-button"> Les 7 piliers de vie</a>
-      </div>
+    </li>
+    </ul>
 
-</div>
-          
-    <button id="scrollTopBtn"><b>Remonter</b></button>
 
-    <style>
-    #scrollTopBtn {
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        padding: 10px 20px;
-        background-color: #085e79;
-        color: white;
-        border: none;
-        cursor: pointer;
-        display: none; /* Cachez le bouton par défaut */
-        }
-    </style>
-    
-    <script>
-        function toggleCheckbox(checkbox) {
-            checkbox.parentNode.classList.toggle('checked', checkbox.checked);
-        }
-    
-        document.addEventListener('DOMContentLoaded', function () {
-            const burger = document.querySelector('.burger');
-            const navLinks = document.querySelector('.navbar-links');
-    
-            burger.addEventListener('click', function () {
-                navLinks.classList.toggle('nav-active');
-            });
+<style>
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #085e79;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Cachez le bouton par défaut */
+    }
+</style>
+
+<script>
+    function toggleCheckbox(checkbox) {
+        checkbox.parentNode.classList.toggle('checked', checkbox.checked);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.navbar-links');
+
+        burger.addEventListener('click', function () {
+            navLinks.classList.toggle('nav-active');
         });
-    
-    
-    
-    
-        document.getElementById('saveButton').addEventListener('click', function() {
-        const firstName = document.getElementById('firstName').value.trim();
-        const lastName = document.getElementById('lastName').value.trim();
-        const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
-        let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
-        let allResponsesFilled = true;
-    
-        checklistItems.forEach((textarea, index) => {
-            const question = textarea.closest('li').innerText.split('\n')[0].trim();
-            const answer = textarea.value.trim();
-            if (!answer) {
-                allResponsesFilled = false;
-            }
-            responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
-        });
-    
-        if (!firstName || !lastName) {
-            alert("Veuillez entrer votre nom et votre prénom.");
-            return;
+    });
+
+
+
+
+    document.getElementById('saveButton').addEventListener('click', function() {
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const checklistItems = document.querySelectorAll('.checklist li textarea.response-area');
+    let responses = `Nom: ${lastName}\nPrénom: ${firstName}\n\n`;
+    let allResponsesFilled = true;
+
+    checklistItems.forEach((textarea, index) => {
+        const question = textarea.closest('li').innerText.split('\n')[0].trim();
+        const answer = textarea.value.trim();
+        if (!answer) {
+            allResponsesFilled = false;
         }
-    
-        if (!allResponsesFilled) {
-            alert("Veuillez répondre à toutes les questions avant de soumettre.");
-            return;
-        }
-    
-        const blob = new Blob([responses], { type: 'text/plain' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = `${firstName}_${lastName}_reponses.txt`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        });
-    
-    
-        // Fonction pour remonter en haut de la page
-        function scrollToTop() {
-        window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Effet de défilement doux
-        });
-        }
-    
-        // Affiche le bouton quand l'utilisateur descend de 100px
-        window.onscroll = function() {
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollTopBtn.style.display = "block";
-        } else {
-        scrollTopBtn.style.display = "none";
-        }
-        };
-    
-        // Ajoute l'événement de clic au bouton
-        document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
-    </script>
-    
-    
-    </body>
-    </html>
-    
+        responses += `Question ${index + 1}: ${question}\nRéponse: ${answer}\n\n`;
+    });
+
+    if (!firstName || !lastName) {
+        alert("Veuillez entrer votre nom et votre prénom.");
+        return;
+    }
+
+    if (!allResponsesFilled) {
+        alert("Veuillez répondre à toutes les questions avant de soumettre.");
+        return;
+    }
+
+    const blob = new Blob([responses], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${firstName}_${lastName}_reponses.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    });
+
+
+    // Fonction pour remonter en haut de la page
+    function scrollToTop() {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Effet de défilement doux
+    });
+    }
+
+    // Affiche le bouton quand l'utilisateur descend de 100px
+    window.onscroll = function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.display = "block";
+    } else {
+    scrollTopBtn.style.display = "none";
+    }
+    };
+
+    // Ajoute l'événement de clic au bouton
+    document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
+</script>
+
+
+</body>
+</html>
